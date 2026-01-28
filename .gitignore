@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific - Large files and outputs
+data/videos/*.mp4
+data/videos/*.avi
+data/videos/*.mov
+data/videos/*.mkv
+data/output/
+data/output_backup/
+data/test/
+data/lectures/*/slides/*.png
+data/lectures/*/audio/*.wav
+data/lectures/*/audio/*.mp3
+data/extracted_notes/
+data/final_notes/
+data/final_slides/*.html
+data/transition_previews/
+visualizations/
+visualizations copy/
+
+# Backup files
+*_backup_*/
+transitions_backup_*.json
+
+# Cache files
+data/lectures/*/ocr_cache.json
+data/lectures/*/transcript_cache.json
+
+# Logs
+logs/*.log
+
+# Model files (large binary files)
+models/*.json
+models/*.pkl
+models/*.bin
+
+# Keep structure but ignore content
+!data/videos/.gitkeep
+!data/output/.gitkeep
+!data/lectures/.gitkeep
+!logs/.gitkeep
+!models/.gitkeep

@@ -1,0 +1,12 @@
+# Detected transitions (standardized format)
+# Format: timestamp in seconds
+# Total: 8 transitions
+
+85.00
+193.00
+390.00
+430.00
+480.00
+589.00
+875.00
+1195.00

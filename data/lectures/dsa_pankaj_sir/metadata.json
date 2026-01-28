@@ -1,0 +1,231 @@
+{
+  "video_id": "dsa_pankaj_sir",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.95,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "dsa_pankaj_sir_slide_001.png",
+      "timestamp": 25.2,
+      "is_blank": true,
+      "edge_count": 0.028,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 25.2,
+      "audio_duration": 25.2
+    },
+    {
+      "slide_number": 2,
+      "filename": "dsa_pankaj_sir_slide_002.png",
+      "timestamp": 36.8,
+      "is_blank": true,
+      "edge_count": 0.03,
+      "ssim_from_prev": 0.861,
+      "audio_window_start": 25.2,
+      "audio_window_end": 36.8,
+      "audio_duration": 11.6
+    },
+    {
+      "slide_number": 3,
+      "filename": "dsa_pankaj_sir_slide_003.png",
+      "timestamp": 85.6,
+      "is_blank": true,
+      "edge_count": 0.01,
+      "ssim_from_prev": 0.807,
+      "audio_window_start": 36.8,
+      "audio_window_end": 85.6,
+      "audio_duration": 48.8
+    },
+    {
+      "slide_number": 4,
+      "filename": "dsa_pankaj_sir_slide_004.png",
+      "timestamp": 129.6,
+      "is_blank": true,
+      "edge_count": 0.015,
+      "ssim_from_prev": 0.875,
+      "audio_window_start": 85.6,
+      "audio_window_end": 129.6,
+      "audio_duration": 44.0
+    },
+    {
+      "slide_number": 5,
+      "filename": "dsa_pankaj_sir_slide_005.png",
+      "timestamp": 153.2,
+      "is_blank": true,
+      "edge_count": 0.018,
+      "ssim_from_prev": 0.881,
+      "audio_window_start": 129.6,
+      "audio_window_end": 153.2,
+      "audio_duration": 23.6
+    },
+    {
+      "slide_number": 6,
+      "filename": "dsa_pankaj_sir_slide_006.png",
+      "timestamp": 187.4,
+      "is_blank": true,
+      "edge_count": 0.023,
+      "ssim_from_prev": 0.877,
+      "audio_window_start": 153.2,
+      "audio_window_end": 187.4,
+      "audio_duration": 34.2
+    },
+    {
+      "slide_number": 7,
+      "filename": "dsa_pankaj_sir_slide_007.png",
+      "timestamp": 241.59,
+      "is_blank": true,
+      "edge_count": 0.026,
+      "ssim_from_prev": 0.812,
+      "audio_window_start": 187.4,
+      "audio_window_end": 241.59,
+      "audio_duration": 54.19
+    },
+    {
+      "slide_number": 8,
+      "filename": "dsa_pankaj_sir_slide_008.png",
+      "timestamp": 262.99,
+      "is_blank": true,
+      "edge_count": 0.022,
+      "ssim_from_prev": 0.805,
+      "audio_window_start": 241.59,
+      "audio_window_end": 262.99,
+      "audio_duration": 21.4
+    },
+    {
+      "slide_number": 9,
+      "filename": "dsa_pankaj_sir_slide_009.png",
+      "timestamp": 282.79,
+      "is_blank": true,
+      "edge_count": 0.067,
+      "ssim_from_prev": 0.359,
+      "audio_window_start": 262.99,
+      "audio_window_end": 282.79,
+      "audio_duration": 19.8
+    },
+    {
+      "slide_number": 10,
+      "filename": "dsa_pankaj_sir_slide_010.png",
+      "timestamp": 326.59,
+      "is_blank": true,
+      "edge_count": 0.023,
+      "ssim_from_prev": 0.474,
+      "audio_window_start": 282.79,
+      "audio_window_end": 326.59,
+      "audio_duration": 43.8
+    },
+    {
+      "slide_number": 11,
+      "filename": "dsa_pankaj_sir_slide_011.png",
+      "timestamp": 364.39,
+      "is_blank": true,
+      "edge_count": 0.012,
+      "ssim_from_prev": 0.741,
+      "audio_window_start": 326.59,
+      "audio_window_end": 364.39,
+      "audio_duration": 37.8
+    },
+    {
+      "slide_number": 12,
+      "filename": "dsa_pankaj_sir_slide_012.png",
+      "timestamp": 382.59,
+      "is_blank": true,
+      "edge_count": 0.01,
+      "ssim_from_prev": 0.866,
+      "audio_window_start": 364.39,
+      "audio_window_end": 382.59,
+      "audio_duration": 18.2
+    },
+    {
+      "slide_number": 13,
+      "filename": "dsa_pankaj_sir_slide_013.png",
+      "timestamp": 395.99,
+      "is_blank": true,
+      "edge_count": 0.011,
+      "ssim_from_prev": 0.922,
+      "audio_window_start": 382.59,
+      "audio_window_end": 395.99,
+      "audio_duration": 13.4
+    },
+    {
+      "slide_number": 14,
+      "filename": "dsa_pankaj_sir_slide_014.png",
+      "timestamp": 516.19,
+      "is_blank": true,
+      "edge_count": 0.021,
+      "ssim_from_prev": 0.846,
+      "audio_window_start": 395.99,
+      "audio_window_end": 516.19,
+      "audio_duration": 120.2
+    },
+    {
+      "slide_number": 15,
+      "filename": "dsa_pankaj_sir_slide_015.png",
+      "timestamp": 562.59,
+      "is_blank": true,
+      "edge_count": 0.017,
+      "ssim_from_prev": 0.772,
+      "audio_window_start": 516.19,
+      "audio_window_end": 562.59,
+      "audio_duration": 46.4
+    },
+    {
+      "slide_number": 16,
+      "filename": "dsa_pankaj_sir_slide_016.png",
+      "timestamp": 578.19,
+      "is_blank": true,
+      "edge_count": 0.015,
+      "ssim_from_prev": 0.814,
+      "audio_window_start": 562.59,
+      "audio_window_end": 578.19,
+      "audio_duration": 15.6
+    },
+    {
+      "slide_number": 17,
+      "filename": "dsa_pankaj_sir_slide_017.png",
+      "timestamp": 715.38,
+      "is_blank": true,
+      "edge_count": 0.008,
+      "ssim_from_prev": 0.851,
+      "audio_window_start": 578.19,
+      "audio_window_end": 715.38,
+      "audio_duration": 137.19
+    },
+    {
+      "slide_number": 18,
+      "filename": "dsa_pankaj_sir_slide_018.png",
+      "timestamp": 771.18,
+      "is_blank": true,
+      "edge_count": 0.016,
+      "ssim_from_prev": 0.864,
+      "audio_window_start": 715.38,
+      "audio_window_end": 771.18,
+      "audio_duration": 55.8
+    },
+    {
+      "slide_number": 19,
+      "filename": "dsa_pankaj_sir_slide_019.png",
+      "timestamp": 921.98,
+      "is_blank": true,
+      "edge_count": 0.021,
+      "ssim_from_prev": 0.873,
+      "audio_window_start": 771.18,
+      "audio_window_end": 921.98,
+      "audio_duration": 150.8
+    },
+    {
+      "slide_number": 20,
+      "filename": "dsa_pankaj_sir_slide_020.png",
+      "timestamp": 941.78,
+      "is_blank": true,
+      "edge_count": 0.023,
+      "ssim_from_prev": 0.917,
+      "audio_window_start": 921.98,
+      "audio_window_end": 941.78,
+      "audio_duration": 19.8
+    }
+  ]
+}

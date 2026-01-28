@@ -1,0 +1,105 @@
+{
+  "video_id": "chemistry_10_english",
+  "generated_at": "2026-01-27T10:47:59.033452",
+  "total_transitions": 6,
+  "blank_count": 0,
+  "content_count": 6,
+  "transitions": [
+    {
+      "index": 1,
+      "timestamp": 65.4,
+      "timestamp_formatted": "01:05",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.872,
+      "has_audio": false,
+      "audio_window": {
+        "start": 0.0,
+        "end": 65.4,
+        "duration": 65.4
+      },
+      "preview_image": "transition_previews/transition_001.jpg",
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "timestamp": 320.4,
+      "timestamp_formatted": "05:20",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.512,
+      "has_audio": false,
+      "audio_window": {
+        "start": 65.4,
+        "end": 320.4,
+        "duration": 255.0
+      },
+      "preview_image": "transition_previews/transition_002.jpg",
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "timestamp": 603.6,
+      "timestamp_formatted": "10:03",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.376,
+      "has_audio": false,
+      "audio_window": {
+        "start": 320.4,
+        "end": 603.6,
+        "duration": 283.2
+      },
+      "preview_image": "transition_previews/transition_003.jpg",
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "timestamp": 796.8,
+      "timestamp_formatted": "13:16",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.113,
+      "has_audio": false,
+      "audio_window": {
+        "start": 603.6,
+        "end": 796.8,
+        "duration": 193.2
+      },
+      "preview_image": "transition_previews/transition_004.jpg",
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "timestamp": 954.6,
+      "timestamp_formatted": "15:54",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.123,
+      "has_audio": false,
+      "audio_window": {
+        "start": 796.8,
+        "end": 954.6,
+        "duration": 157.8
+      },
+      "preview_image": "transition_previews/transition_005.jpg",
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "timestamp": 954.63,
+      "timestamp_formatted": "15:54",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.279,
+      "has_audio": false,
+      "audio_window": {
+        "start": 954.6,
+        "end": 954.63,
+        "duration": 0.03
+      },
+      "preview_image": "transition_previews/transition_006.jpg",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "video_id": "mathematics_07_hindi",
+  "generated_at": "2026-01-27T10:48:07.879517",
+  "total_transitions": 6,
+  "blank_count": 1,
+  "content_count": 5,
+  "transitions": [
+    {
+      "index": 1,
+      "timestamp": 30.0,
+      "timestamp_formatted": "00:30",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.604,
+      "has_audio": false,
+      "audio_window": {
+        "start": 0.0,
+        "end": 30.0,
+        "duration": 30.0
+      },
+      "preview_image": "transition_previews/transition_001.jpg",
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "timestamp": 162.2,
+      "timestamp_formatted": "02:42",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.796,
+      "has_audio": false,
+      "audio_window": {
+        "start": 30.0,
+        "end": 162.2,
+        "duration": 132.2
+      },
+      "preview_image": "transition_previews/transition_002.jpg",
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "timestamp": 327.6,
+      "timestamp_formatted": "05:27",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.031,
+      "has_audio": false,
+      "audio_window": {
+        "start": 162.2,
+        "end": 327.6,
+        "duration": 165.4
+      },
+      "preview_image": "transition_previews/transition_003.jpg",
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "timestamp": 518.6,
+      "timestamp_formatted": "08:38",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.762,
+      "has_audio": false,
+      "audio_window": {
+        "start": 327.6,
+        "end": 518.6,
+        "duration": 191.0
+      },
+      "preview_image": "transition_previews/transition_004.jpg",
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "timestamp": 636.6,
+      "timestamp_formatted": "10:36",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.505,
+      "has_audio": false,
+      "audio_window": {
+        "start": 518.6,
+        "end": 636.6,
+        "duration": 118.0
+      },
+      "preview_image": "transition_previews/transition_005.jpg",
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "timestamp": 655.03,
+      "timestamp_formatted": "10:55",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.135,
+      "has_audio": false,
+      "audio_window": {
+        "start": 636.6,
+        "end": 655.03,
+        "duration": 18.43
+      },
+      "preview_image": "transition_previews/transition_006.jpg",
+      "notes": ""
+    }
+  ]
+}

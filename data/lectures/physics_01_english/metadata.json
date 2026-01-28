@@ -1,0 +1,275 @@
+{
+  "video_id": "physics_01_english",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "physics_01_english_slide_001.png",
+      "timestamp": 20.6,
+      "is_blank": false,
+      "edge_count": 0.185,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 20.6,
+      "audio_duration": 20.6
+    },
+    {
+      "slide_number": 2,
+      "filename": "physics_01_english_slide_002.png",
+      "timestamp": 28.2,
+      "is_blank": false,
+      "edge_count": 0.26,
+      "ssim_from_prev": 0.548,
+      "audio_window_start": 20.6,
+      "audio_window_end": 28.2,
+      "audio_duration": 7.6
+    },
+    {
+      "slide_number": 3,
+      "filename": "physics_01_english_slide_003.png",
+      "timestamp": 52.6,
+      "is_blank": false,
+      "edge_count": 0.317,
+      "ssim_from_prev": 0.43,
+      "audio_window_start": 28.2,
+      "audio_window_end": 52.6,
+      "audio_duration": 24.4
+    },
+    {
+      "slide_number": 4,
+      "filename": "physics_01_english_slide_004.png",
+      "timestamp": 109.4,
+      "is_blank": true,
+      "edge_count": 0.067,
+      "ssim_from_prev": 0.146,
+      "audio_window_start": 52.6,
+      "audio_window_end": 109.4,
+      "audio_duration": 56.8
+    },
+    {
+      "slide_number": 5,
+      "filename": "physics_01_english_slide_005.png",
+      "timestamp": 125.2,
+      "is_blank": true,
+      "edge_count": 0.056,
+      "ssim_from_prev": 0.786,
+      "audio_window_start": 109.4,
+      "audio_window_end": 125.2,
+      "audio_duration": 15.8
+    },
+    {
+      "slide_number": 6,
+      "filename": "physics_01_english_slide_006.png",
+      "timestamp": 183.0,
+      "is_blank": false,
+      "edge_count": 0.612,
+      "ssim_from_prev": 0.113,
+      "audio_window_start": 125.2,
+      "audio_window_end": 183.0,
+      "audio_duration": 57.8
+    },
+    {
+      "slide_number": 7,
+      "filename": "physics_01_english_slide_007.png",
+      "timestamp": 201.2,
+      "is_blank": false,
+      "edge_count": 0.276,
+      "ssim_from_prev": 0.558,
+      "audio_window_start": 183.0,
+      "audio_window_end": 201.2,
+      "audio_duration": 18.2
+    },
+    {
+      "slide_number": 8,
+      "filename": "physics_01_english_slide_008.png",
+      "timestamp": 242.8,
+      "is_blank": true,
+      "edge_count": 0.027,
+      "ssim_from_prev": 0.13,
+      "audio_window_start": 201.2,
+      "audio_window_end": 242.8,
+      "audio_duration": 41.6
+    },
+    {
+      "slide_number": 9,
+      "filename": "physics_01_english_slide_009.png",
+      "timestamp": 258.4,
+      "is_blank": true,
+      "edge_count": 0.083,
+      "ssim_from_prev": 0.685,
+      "audio_window_start": 242.8,
+      "audio_window_end": 258.4,
+      "audio_duration": 15.6
+    },
+    {
+      "slide_number": 10,
+      "filename": "physics_01_english_slide_010.png",
+      "timestamp": 289.4,
+      "is_blank": false,
+      "edge_count": 0.457,
+      "ssim_from_prev": 0.135,
+      "audio_window_start": 258.4,
+      "audio_window_end": 289.4,
+      "audio_duration": 31.0
+    },
+    {
+      "slide_number": 11,
+      "filename": "physics_01_english_slide_011.png",
+      "timestamp": 307.8,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.071,
+      "audio_window_start": 289.4,
+      "audio_window_end": 307.8,
+      "audio_duration": 18.4
+    },
+    {
+      "slide_number": 12,
+      "filename": "physics_01_english_slide_012.png",
+      "timestamp": 433.4,
+      "is_blank": true,
+      "edge_count": 0.041,
+      "ssim_from_prev": 0.801,
+      "audio_window_start": 307.8,
+      "audio_window_end": 433.4,
+      "audio_duration": 125.6
+    },
+    {
+      "slide_number": 13,
+      "filename": "physics_01_english_slide_013.png",
+      "timestamp": 510.4,
+      "is_blank": true,
+      "edge_count": 0.007,
+      "ssim_from_prev": 0.798,
+      "audio_window_start": 433.4,
+      "audio_window_end": 510.4,
+      "audio_duration": 77.0
+    },
+    {
+      "slide_number": 14,
+      "filename": "physics_01_english_slide_014.png",
+      "timestamp": 531.6,
+      "is_blank": true,
+      "edge_count": 0.077,
+      "ssim_from_prev": 0.728,
+      "audio_window_start": 510.4,
+      "audio_window_end": 531.6,
+      "audio_duration": 21.2
+    },
+    {
+      "slide_number": 15,
+      "filename": "physics_01_english_slide_015.png",
+      "timestamp": 550.0,
+      "is_blank": true,
+      "edge_count": 0.019,
+      "ssim_from_prev": 0.876,
+      "audio_window_start": 531.6,
+      "audio_window_end": 550.0,
+      "audio_duration": 18.4
+    },
+    {
+      "slide_number": 16,
+      "filename": "physics_01_english_slide_016.png",
+      "timestamp": 604.6,
+      "is_blank": true,
+      "edge_count": 0.018,
+      "ssim_from_prev": 0.795,
+      "audio_window_start": 550.0,
+      "audio_window_end": 604.6,
+      "audio_duration": 54.6
+    },
+    {
+      "slide_number": 17,
+      "filename": "physics_01_english_slide_017.png",
+      "timestamp": 656.4,
+      "is_blank": true,
+      "edge_count": 0.006,
+      "ssim_from_prev": 0.805,
+      "audio_window_start": 604.6,
+      "audio_window_end": 656.4,
+      "audio_duration": 51.8
+    },
+    {
+      "slide_number": 18,
+      "filename": "physics_01_english_slide_018.png",
+      "timestamp": 671.2,
+      "is_blank": true,
+      "edge_count": 0.016,
+      "ssim_from_prev": 0.806,
+      "audio_window_start": 656.4,
+      "audio_window_end": 671.2,
+      "audio_duration": 14.8
+    },
+    {
+      "slide_number": 19,
+      "filename": "physics_01_english_slide_019.png",
+      "timestamp": 717.0,
+      "is_blank": false,
+      "edge_count": 0.712,
+      "ssim_from_prev": 0.071,
+      "audio_window_start": 671.2,
+      "audio_window_end": 717.0,
+      "audio_duration": 45.8
+    },
+    {
+      "slide_number": 20,
+      "filename": "physics_01_english_slide_020.png",
+      "timestamp": 740.4,
+      "is_blank": true,
+      "edge_count": 0.018,
+      "ssim_from_prev": 0.106,
+      "audio_window_start": 717.0,
+      "audio_window_end": 740.4,
+      "audio_duration": 23.4
+    },
+    {
+      "slide_number": 21,
+      "filename": "physics_01_english_slide_021.png",
+      "timestamp": 851.4,
+      "is_blank": true,
+      "edge_count": 0.012,
+      "ssim_from_prev": 0.839,
+      "audio_window_start": 740.4,
+      "audio_window_end": 851.4,
+      "audio_duration": 111.0
+    },
+    {
+      "slide_number": 22,
+      "filename": "physics_01_english_slide_022.png",
+      "timestamp": 891.8,
+      "is_blank": true,
+      "edge_count": 0.033,
+      "ssim_from_prev": 0.829,
+      "audio_window_start": 851.4,
+      "audio_window_end": 891.8,
+      "audio_duration": 40.4
+    },
+    {
+      "slide_number": 23,
+      "filename": "physics_01_english_slide_023.png",
+      "timestamp": 905.8,
+      "is_blank": false,
+      "edge_count": 0.399,
+      "ssim_from_prev": 0.825,
+      "audio_window_start": 891.8,
+      "audio_window_end": 905.8,
+      "audio_duration": 14.0
+    },
+    {
+      "slide_number": 24,
+      "filename": "physics_01_english_slide_024.png",
+      "timestamp": 935.4,
+      "is_blank": false,
+      "edge_count": 0.38,
+      "ssim_from_prev": 0.662,
+      "audio_window_start": 905.8,
+      "audio_window_end": 935.4,
+      "audio_duration": 29.6
+    }
+  ]
+}

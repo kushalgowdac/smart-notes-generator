@@ -1,0 +1,99 @@
+{
+  "video_id": "toc_1",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "toc_1_slide_001.png",
+      "timestamp": 84.4,
+      "is_blank": false,
+      "edge_count": 0.269,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 84.4,
+      "audio_duration": 84.4
+    },
+    {
+      "slide_number": 2,
+      "filename": "toc_1_slide_002.png",
+      "timestamp": 195.4,
+      "is_blank": true,
+      "edge_count": 0.085,
+      "ssim_from_prev": 0.813,
+      "audio_window_start": 84.4,
+      "audio_window_end": 195.4,
+      "audio_duration": 111.0
+    },
+    {
+      "slide_number": 3,
+      "filename": "toc_1_slide_003.png",
+      "timestamp": 391.6,
+      "is_blank": true,
+      "edge_count": 0.063,
+      "ssim_from_prev": 0.884,
+      "audio_window_start": 195.4,
+      "audio_window_end": 391.6,
+      "audio_duration": 196.2
+    },
+    {
+      "slide_number": 4,
+      "filename": "toc_1_slide_004.png",
+      "timestamp": 430.2,
+      "is_blank": false,
+      "edge_count": 0.409,
+      "ssim_from_prev": 0.818,
+      "audio_window_start": 391.6,
+      "audio_window_end": 430.2,
+      "audio_duration": 38.6
+    },
+    {
+      "slide_number": 5,
+      "filename": "toc_1_slide_005.png",
+      "timestamp": 478.0,
+      "is_blank": true,
+      "edge_count": 0.025,
+      "ssim_from_prev": 0.813,
+      "audio_window_start": 430.2,
+      "audio_window_end": 478.0,
+      "audio_duration": 47.8
+    },
+    {
+      "slide_number": 6,
+      "filename": "toc_1_slide_006.png",
+      "timestamp": 588.4,
+      "is_blank": true,
+      "edge_count": 0.03,
+      "ssim_from_prev": 0.893,
+      "audio_window_start": 478.0,
+      "audio_window_end": 588.4,
+      "audio_duration": 110.4
+    },
+    {
+      "slide_number": 7,
+      "filename": "toc_1_slide_007.png",
+      "timestamp": 874.8,
+      "is_blank": false,
+      "edge_count": 0.175,
+      "ssim_from_prev": 0.915,
+      "audio_window_start": 588.4,
+      "audio_window_end": 874.8,
+      "audio_duration": 286.4
+    },
+    {
+      "slide_number": 8,
+      "filename": "toc_1_slide_008.png",
+      "timestamp": 1195.0,
+      "is_blank": true,
+      "edge_count": 0.028,
+      "ssim_from_prev": 0.906,
+      "audio_window_start": 874.8,
+      "audio_window_end": 1195.0,
+      "audio_duration": 320.2
+    }
+  ]
+}

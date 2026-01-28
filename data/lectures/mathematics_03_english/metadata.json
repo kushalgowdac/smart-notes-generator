@@ -1,0 +1,330 @@
+{
+  "video_id": "mathematics_03_english",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "mathematics_03_english_slide_001.png",
+      "timestamp": 41.4,
+      "is_blank": true,
+      "edge_count": 0.011,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 41.4,
+      "audio_duration": 41.4
+    },
+    {
+      "slide_number": 2,
+      "filename": "mathematics_03_english_slide_002.png",
+      "timestamp": 55.2,
+      "is_blank": false,
+      "edge_count": 0.467,
+      "ssim_from_prev": 0.154,
+      "audio_window_start": 41.4,
+      "audio_window_end": 55.2,
+      "audio_duration": 13.8
+    },
+    {
+      "slide_number": 3,
+      "filename": "mathematics_03_english_slide_003.png",
+      "timestamp": 156.4,
+      "is_blank": false,
+      "edge_count": 0.392,
+      "ssim_from_prev": 0.673,
+      "audio_window_start": 55.2,
+      "audio_window_end": 156.4,
+      "audio_duration": 101.2
+    },
+    {
+      "slide_number": 4,
+      "filename": "mathematics_03_english_slide_004.png",
+      "timestamp": 162.8,
+      "is_blank": false,
+      "edge_count": 0.41,
+      "ssim_from_prev": 0.718,
+      "audio_window_start": 156.4,
+      "audio_window_end": 162.8,
+      "audio_duration": 6.4
+    },
+    {
+      "slide_number": 5,
+      "filename": "mathematics_03_english_slide_005.png",
+      "timestamp": 189.8,
+      "is_blank": false,
+      "edge_count": 0.368,
+      "ssim_from_prev": 0.696,
+      "audio_window_start": 162.8,
+      "audio_window_end": 189.8,
+      "audio_duration": 27.0
+    },
+    {
+      "slide_number": 6,
+      "filename": "mathematics_03_english_slide_006.png",
+      "timestamp": 202.0,
+      "is_blank": false,
+      "edge_count": 0.228,
+      "ssim_from_prev": 0.766,
+      "audio_window_start": 189.8,
+      "audio_window_end": 202.0,
+      "audio_duration": 12.2
+    },
+    {
+      "slide_number": 7,
+      "filename": "mathematics_03_english_slide_007.png",
+      "timestamp": 275.4,
+      "is_blank": false,
+      "edge_count": 0.28,
+      "ssim_from_prev": 0.844,
+      "audio_window_start": 202.0,
+      "audio_window_end": 275.4,
+      "audio_duration": 73.4
+    },
+    {
+      "slide_number": 8,
+      "filename": "mathematics_03_english_slide_008.png",
+      "timestamp": 315.8,
+      "is_blank": false,
+      "edge_count": 0.344,
+      "ssim_from_prev": 0.781,
+      "audio_window_start": 275.4,
+      "audio_window_end": 315.8,
+      "audio_duration": 40.4
+    },
+    {
+      "slide_number": 9,
+      "filename": "mathematics_03_english_slide_009.png",
+      "timestamp": 331.2,
+      "is_blank": false,
+      "edge_count": 0.472,
+      "ssim_from_prev": 0.69,
+      "audio_window_start": 315.8,
+      "audio_window_end": 331.2,
+      "audio_duration": 15.4
+    },
+    {
+      "slide_number": 10,
+      "filename": "mathematics_03_english_slide_010.png",
+      "timestamp": 415.0,
+      "is_blank": false,
+      "edge_count": 0.636,
+      "ssim_from_prev": 0.596,
+      "audio_window_start": 331.2,
+      "audio_window_end": 415.0,
+      "audio_duration": 83.8
+    },
+    {
+      "slide_number": 11,
+      "filename": "mathematics_03_english_slide_011.png",
+      "timestamp": 430.2,
+      "is_blank": false,
+      "edge_count": 0.452,
+      "ssim_from_prev": 0.642,
+      "audio_window_start": 415.0,
+      "audio_window_end": 430.2,
+      "audio_duration": 15.2
+    },
+    {
+      "slide_number": 12,
+      "filename": "mathematics_03_english_slide_012.png",
+      "timestamp": 475.8,
+      "is_blank": false,
+      "edge_count": 0.503,
+      "ssim_from_prev": 0.635,
+      "audio_window_start": 430.2,
+      "audio_window_end": 475.8,
+      "audio_duration": 45.6
+    },
+    {
+      "slide_number": 13,
+      "filename": "mathematics_03_english_slide_013.png",
+      "timestamp": 500.2,
+      "is_blank": false,
+      "edge_count": 0.517,
+      "ssim_from_prev": 0.629,
+      "audio_window_start": 475.8,
+      "audio_window_end": 500.2,
+      "audio_duration": 24.4
+    },
+    {
+      "slide_number": 14,
+      "filename": "mathematics_03_english_slide_014.png",
+      "timestamp": 595.6,
+      "is_blank": false,
+      "edge_count": 0.27,
+      "ssim_from_prev": 0.727,
+      "audio_window_start": 500.2,
+      "audio_window_end": 595.6,
+      "audio_duration": 95.4
+    },
+    {
+      "slide_number": 15,
+      "filename": "mathematics_03_english_slide_015.png",
+      "timestamp": 626.2,
+      "is_blank": false,
+      "edge_count": 0.441,
+      "ssim_from_prev": 0.727,
+      "audio_window_start": 595.6,
+      "audio_window_end": 626.2,
+      "audio_duration": 30.6
+    },
+    {
+      "slide_number": 16,
+      "filename": "mathematics_03_english_slide_016.png",
+      "timestamp": 649.0,
+      "is_blank": false,
+      "edge_count": 0.761,
+      "ssim_from_prev": 0.577,
+      "audio_window_start": 626.2,
+      "audio_window_end": 649.0,
+      "audio_duration": 22.8
+    },
+    {
+      "slide_number": 17,
+      "filename": "mathematics_03_english_slide_017.png",
+      "timestamp": 663.2,
+      "is_blank": false,
+      "edge_count": 0.331,
+      "ssim_from_prev": 0.601,
+      "audio_window_start": 649.0,
+      "audio_window_end": 663.2,
+      "audio_duration": 14.2
+    },
+    {
+      "slide_number": 18,
+      "filename": "mathematics_03_english_slide_018.png",
+      "timestamp": 672.8,
+      "is_blank": false,
+      "edge_count": 0.429,
+      "ssim_from_prev": 0.684,
+      "audio_window_start": 663.2,
+      "audio_window_end": 672.8,
+      "audio_duration": 9.6
+    },
+    {
+      "slide_number": 19,
+      "filename": "mathematics_03_english_slide_019.png",
+      "timestamp": 738.4,
+      "is_blank": false,
+      "edge_count": 0.311,
+      "ssim_from_prev": 0.692,
+      "audio_window_start": 672.8,
+      "audio_window_end": 738.4,
+      "audio_duration": 65.6
+    },
+    {
+      "slide_number": 20,
+      "filename": "mathematics_03_english_slide_020.png",
+      "timestamp": 747.2,
+      "is_blank": false,
+      "edge_count": 0.392,
+      "ssim_from_prev": 0.713,
+      "audio_window_start": 738.4,
+      "audio_window_end": 747.2,
+      "audio_duration": 8.8
+    },
+    {
+      "slide_number": 21,
+      "filename": "mathematics_03_english_slide_021.png",
+      "timestamp": 784.4,
+      "is_blank": false,
+      "edge_count": 0.412,
+      "ssim_from_prev": 0.715,
+      "audio_window_start": 747.2,
+      "audio_window_end": 784.4,
+      "audio_duration": 37.2
+    },
+    {
+      "slide_number": 22,
+      "filename": "mathematics_03_english_slide_022.png",
+      "timestamp": 793.2,
+      "is_blank": false,
+      "edge_count": 0.356,
+      "ssim_from_prev": 0.712,
+      "audio_window_start": 784.4,
+      "audio_window_end": 793.2,
+      "audio_duration": 8.8
+    },
+    {
+      "slide_number": 23,
+      "filename": "mathematics_03_english_slide_023.png",
+      "timestamp": 813.2,
+      "is_blank": false,
+      "edge_count": 0.315,
+      "ssim_from_prev": 0.735,
+      "audio_window_start": 793.2,
+      "audio_window_end": 813.2,
+      "audio_duration": 20.0
+    },
+    {
+      "slide_number": 24,
+      "filename": "mathematics_03_english_slide_024.png",
+      "timestamp": 820.2,
+      "is_blank": false,
+      "edge_count": 0.368,
+      "ssim_from_prev": 0.712,
+      "audio_window_start": 813.2,
+      "audio_window_end": 820.2,
+      "audio_duration": 7.0
+    },
+    {
+      "slide_number": 25,
+      "filename": "mathematics_03_english_slide_025.png",
+      "timestamp": 887.2,
+      "is_blank": false,
+      "edge_count": 0.457,
+      "ssim_from_prev": 0.684,
+      "audio_window_start": 820.2,
+      "audio_window_end": 887.2,
+      "audio_duration": 67.0
+    },
+    {
+      "slide_number": 26,
+      "filename": "mathematics_03_english_slide_026.png",
+      "timestamp": 899.6,
+      "is_blank": false,
+      "edge_count": 0.306,
+      "ssim_from_prev": 0.689,
+      "audio_window_start": 887.2,
+      "audio_window_end": 899.6,
+      "audio_duration": 12.4
+    },
+    {
+      "slide_number": 27,
+      "filename": "mathematics_03_english_slide_027.png",
+      "timestamp": 925.6,
+      "is_blank": false,
+      "edge_count": 0.32,
+      "ssim_from_prev": 0.768,
+      "audio_window_start": 899.6,
+      "audio_window_end": 925.6,
+      "audio_duration": 26.0
+    },
+    {
+      "slide_number": 28,
+      "filename": "mathematics_03_english_slide_028.png",
+      "timestamp": 932.4,
+      "is_blank": false,
+      "edge_count": 0.398,
+      "ssim_from_prev": 0.731,
+      "audio_window_start": 925.6,
+      "audio_window_end": 932.4,
+      "audio_duration": 6.8
+    },
+    {
+      "slide_number": 29,
+      "filename": "mathematics_03_english_slide_029.png",
+      "timestamp": 996.8,
+      "is_blank": false,
+      "edge_count": 0.42,
+      "ssim_from_prev": 0.583,
+      "audio_window_start": 932.4,
+      "audio_window_end": 996.8,
+      "audio_duration": 64.4
+    }
+  ]
+}

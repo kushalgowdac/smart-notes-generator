@@ -1,0 +1,409 @@
+{
+  "video_id": "physics_01_english",
+  "generated_at": "2026-01-27T10:48:08.120159",
+  "total_transitions": 25,
+  "blank_count": 15,
+  "content_count": 10,
+  "transitions": [
+    {
+      "index": 1,
+      "timestamp": 20.6,
+      "timestamp_formatted": "00:20",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.185,
+      "has_audio": false,
+      "audio_window": {
+        "start": 0.0,
+        "end": 20.6,
+        "duration": 20.6
+      },
+      "preview_image": "transition_previews/transition_001.jpg",
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "timestamp": 28.2,
+      "timestamp_formatted": "00:28",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.26,
+      "has_audio": false,
+      "audio_window": {
+        "start": 20.6,
+        "end": 28.2,
+        "duration": 7.6
+      },
+      "preview_image": "transition_previews/transition_002.jpg",
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "timestamp": 52.6,
+      "timestamp_formatted": "00:52",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.317,
+      "has_audio": false,
+      "audio_window": {
+        "start": 28.2,
+        "end": 52.6,
+        "duration": 24.4
+      },
+      "preview_image": "transition_previews/transition_003.jpg",
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "timestamp": 109.4,
+      "timestamp_formatted": "01:49",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.067,
+      "has_audio": false,
+      "audio_window": {
+        "start": 52.6,
+        "end": 109.4,
+        "duration": 56.8
+      },
+      "preview_image": "transition_previews/transition_004.jpg",
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "timestamp": 125.2,
+      "timestamp_formatted": "02:05",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.056,
+      "has_audio": false,
+      "audio_window": {
+        "start": 109.4,
+        "end": 125.2,
+        "duration": 15.8
+      },
+      "preview_image": "transition_previews/transition_005.jpg",
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "timestamp": 183.0,
+      "timestamp_formatted": "03:03",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.612,
+      "has_audio": false,
+      "audio_window": {
+        "start": 125.2,
+        "end": 183.0,
+        "duration": 57.8
+      },
+      "preview_image": "transition_previews/transition_006.jpg",
+      "notes": ""
+    },
+    {
+      "index": 7,
+      "timestamp": 201.2,
+      "timestamp_formatted": "03:21",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.276,
+      "has_audio": false,
+      "audio_window": {
+        "start": 183.0,
+        "end": 201.2,
+        "duration": 18.2
+      },
+      "preview_image": "transition_previews/transition_007.jpg",
+      "notes": ""
+    },
+    {
+      "index": 8,
+      "timestamp": 242.8,
+      "timestamp_formatted": "04:02",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.027,
+      "has_audio": false,
+      "audio_window": {
+        "start": 201.2,
+        "end": 242.8,
+        "duration": 41.6
+      },
+      "preview_image": "transition_previews/transition_008.jpg",
+      "notes": ""
+    },
+    {
+      "index": 9,
+      "timestamp": 258.4,
+      "timestamp_formatted": "04:18",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.083,
+      "has_audio": false,
+      "audio_window": {
+        "start": 242.8,
+        "end": 258.4,
+        "duration": 15.6
+      },
+      "preview_image": "transition_previews/transition_009.jpg",
+      "notes": ""
+    },
+    {
+      "index": 10,
+      "timestamp": 289.4,
+      "timestamp_formatted": "04:49",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.457,
+      "has_audio": false,
+      "audio_window": {
+        "start": 258.4,
+        "end": 289.4,
+        "duration": 31.0
+      },
+      "preview_image": "transition_previews/transition_010.jpg",
+      "notes": ""
+    },
+    {
+      "index": 11,
+      "timestamp": 307.8,
+      "timestamp_formatted": "05:07",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.0,
+      "has_audio": false,
+      "audio_window": {
+        "start": 289.4,
+        "end": 307.8,
+        "duration": 18.4
+      },
+      "preview_image": "transition_previews/transition_011.jpg",
+      "notes": ""
+    },
+    {
+      "index": 12,
+      "timestamp": 433.4,
+      "timestamp_formatted": "07:13",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.041,
+      "has_audio": false,
+      "audio_window": {
+        "start": 307.8,
+        "end": 433.4,
+        "duration": 125.6
+      },
+      "preview_image": "transition_previews/transition_012.jpg",
+      "notes": ""
+    },
+    {
+      "index": 13,
+      "timestamp": 510.4,
+      "timestamp_formatted": "08:30",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.007,
+      "has_audio": false,
+      "audio_window": {
+        "start": 433.4,
+        "end": 510.4,
+        "duration": 77.0
+      },
+      "preview_image": "transition_previews/transition_013.jpg",
+      "notes": ""
+    },
+    {
+      "index": 14,
+      "timestamp": 531.6,
+      "timestamp_formatted": "08:51",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.077,
+      "has_audio": false,
+      "audio_window": {
+        "start": 510.4,
+        "end": 531.6,
+        "duration": 21.2
+      },
+      "preview_image": "transition_previews/transition_014.jpg",
+      "notes": ""
+    },
+    {
+      "index": 15,
+      "timestamp": 550.0,
+      "timestamp_formatted": "09:10",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.019,
+      "has_audio": false,
+      "audio_window": {
+        "start": 531.6,
+        "end": 550.0,
+        "duration": 18.4
+      },
+      "preview_image": "transition_previews/transition_015.jpg",
+      "notes": ""
+    },
+    {
+      "index": 16,
+      "timestamp": 604.6,
+      "timestamp_formatted": "10:04",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.018,
+      "has_audio": false,
+      "audio_window": {
+        "start": 550.0,
+        "end": 604.6,
+        "duration": 54.6
+      },
+      "preview_image": "transition_previews/transition_016.jpg",
+      "notes": ""
+    },
+    {
+      "index": 17,
+      "timestamp": 656.4,
+      "timestamp_formatted": "10:56",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.006,
+      "has_audio": false,
+      "audio_window": {
+        "start": 604.6,
+        "end": 656.4,
+        "duration": 51.8
+      },
+      "preview_image": "transition_previews/transition_017.jpg",
+      "notes": ""
+    },
+    {
+      "index": 18,
+      "timestamp": 671.2,
+      "timestamp_formatted": "11:11",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.016,
+      "has_audio": false,
+      "audio_window": {
+        "start": 656.4,
+        "end": 671.2,
+        "duration": 14.8
+      },
+      "preview_image": "transition_previews/transition_018.jpg",
+      "notes": ""
+    },
+    {
+      "index": 19,
+      "timestamp": 717.0,
+      "timestamp_formatted": "11:57",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.712,
+      "has_audio": false,
+      "audio_window": {
+        "start": 671.2,
+        "end": 717.0,
+        "duration": 45.8
+      },
+      "preview_image": "transition_previews/transition_019.jpg",
+      "notes": ""
+    },
+    {
+      "index": 20,
+      "timestamp": 740.4,
+      "timestamp_formatted": "12:20",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.018,
+      "has_audio": false,
+      "audio_window": {
+        "start": 717.0,
+        "end": 740.4,
+        "duration": 23.4
+      },
+      "preview_image": "transition_previews/transition_020.jpg",
+      "notes": ""
+    },
+    {
+      "index": 21,
+      "timestamp": 851.4,
+      "timestamp_formatted": "14:11",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.012,
+      "has_audio": false,
+      "audio_window": {
+        "start": 740.4,
+        "end": 851.4,
+        "duration": 111.0
+      },
+      "preview_image": "transition_previews/transition_021.jpg",
+      "notes": ""
+    },
+    {
+      "index": 22,
+      "timestamp": 891.8,
+      "timestamp_formatted": "14:51",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.033,
+      "has_audio": false,
+      "audio_window": {
+        "start": 851.4,
+        "end": 891.8,
+        "duration": 40.4
+      },
+      "preview_image": "transition_previews/transition_022.jpg",
+      "notes": ""
+    },
+    {
+      "index": 23,
+      "timestamp": 905.8,
+      "timestamp_formatted": "15:05",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.399,
+      "has_audio": false,
+      "audio_window": {
+        "start": 891.8,
+        "end": 905.8,
+        "duration": 14.0
+      },
+      "preview_image": "transition_previews/transition_023.jpg",
+      "notes": ""
+    },
+    {
+      "index": 24,
+      "timestamp": 935.4,
+      "timestamp_formatted": "15:35",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.38,
+      "has_audio": false,
+      "audio_window": {
+        "start": 905.8,
+        "end": 935.4,
+        "duration": 29.6
+      },
+      "preview_image": "transition_previews/transition_024.jpg",
+      "notes": ""
+    },
+    {
+      "index": 25,
+      "timestamp": 948.8,
+      "timestamp_formatted": "15:48",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.383,
+      "has_audio": false,
+      "audio_window": {
+        "start": 935.4,
+        "end": 948.8,
+        "duration": 13.4
+      },
+      "preview_image": "transition_previews/transition_025.jpg",
+      "notes": ""
+    }
+  ]
+}

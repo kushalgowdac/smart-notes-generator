@@ -1,0 +1,425 @@
+{
+  "video_id": "chemistry_09_hindi",
+  "generated_at": "2026-01-27T10:47:58.007990",
+  "total_transitions": 26,
+  "blank_count": 1,
+  "content_count": 25,
+  "transitions": [
+    {
+      "index": 1,
+      "timestamp": 28.6,
+      "timestamp_formatted": "00:28",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.567,
+      "has_audio": false,
+      "audio_window": {
+        "start": 0.0,
+        "end": 28.6,
+        "duration": 28.6
+      },
+      "preview_image": "transition_previews/transition_001.jpg",
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "timestamp": 185.2,
+      "timestamp_formatted": "03:05",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.246,
+      "has_audio": false,
+      "audio_window": {
+        "start": 28.6,
+        "end": 185.2,
+        "duration": 156.6
+      },
+      "preview_image": "transition_previews/transition_002.jpg",
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "timestamp": 233.8,
+      "timestamp_formatted": "03:53",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.409,
+      "has_audio": false,
+      "audio_window": {
+        "start": 185.2,
+        "end": 233.8,
+        "duration": 48.6
+      },
+      "preview_image": "transition_previews/transition_003.jpg",
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "timestamp": 299.6,
+      "timestamp_formatted": "04:59",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.432,
+      "has_audio": false,
+      "audio_window": {
+        "start": 233.8,
+        "end": 299.6,
+        "duration": 65.8
+      },
+      "preview_image": "transition_previews/transition_004.jpg",
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "timestamp": 326.2,
+      "timestamp_formatted": "05:26",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.237,
+      "has_audio": false,
+      "audio_window": {
+        "start": 299.6,
+        "end": 326.2,
+        "duration": 26.6
+      },
+      "preview_image": "transition_previews/transition_005.jpg",
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "timestamp": 350.6,
+      "timestamp_formatted": "05:50",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.284,
+      "has_audio": false,
+      "audio_window": {
+        "start": 326.2,
+        "end": 350.6,
+        "duration": 24.4
+      },
+      "preview_image": "transition_previews/transition_006.jpg",
+      "notes": ""
+    },
+    {
+      "index": 7,
+      "timestamp": 394.4,
+      "timestamp_formatted": "06:34",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.479,
+      "has_audio": false,
+      "audio_window": {
+        "start": 350.6,
+        "end": 394.4,
+        "duration": 43.8
+      },
+      "preview_image": "transition_previews/transition_007.jpg",
+      "notes": ""
+    },
+    {
+      "index": 8,
+      "timestamp": 420.4,
+      "timestamp_formatted": "07:00",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.666,
+      "has_audio": false,
+      "audio_window": {
+        "start": 394.4,
+        "end": 420.4,
+        "duration": 26.0
+      },
+      "preview_image": "transition_previews/transition_008.jpg",
+      "notes": ""
+    },
+    {
+      "index": 9,
+      "timestamp": 523.6,
+      "timestamp_formatted": "08:43",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.354,
+      "has_audio": false,
+      "audio_window": {
+        "start": 420.4,
+        "end": 523.6,
+        "duration": 103.2
+      },
+      "preview_image": "transition_previews/transition_009.jpg",
+      "notes": ""
+    },
+    {
+      "index": 10,
+      "timestamp": 581.0,
+      "timestamp_formatted": "09:41",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.387,
+      "has_audio": false,
+      "audio_window": {
+        "start": 523.6,
+        "end": 581.0,
+        "duration": 57.4
+      },
+      "preview_image": "transition_previews/transition_010.jpg",
+      "notes": ""
+    },
+    {
+      "index": 11,
+      "timestamp": 635.2,
+      "timestamp_formatted": "10:35",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.389,
+      "has_audio": false,
+      "audio_window": {
+        "start": 581.0,
+        "end": 635.2,
+        "duration": 54.2
+      },
+      "preview_image": "transition_previews/transition_011.jpg",
+      "notes": ""
+    },
+    {
+      "index": 12,
+      "timestamp": 673.6,
+      "timestamp_formatted": "11:13",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.204,
+      "has_audio": false,
+      "audio_window": {
+        "start": 635.2,
+        "end": 673.6,
+        "duration": 38.4
+      },
+      "preview_image": "transition_previews/transition_012.jpg",
+      "notes": ""
+    },
+    {
+      "index": 13,
+      "timestamp": 761.2,
+      "timestamp_formatted": "12:41",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.327,
+      "has_audio": false,
+      "audio_window": {
+        "start": 673.6,
+        "end": 761.2,
+        "duration": 87.6
+      },
+      "preview_image": "transition_previews/transition_013.jpg",
+      "notes": ""
+    },
+    {
+      "index": 14,
+      "timestamp": 830.4,
+      "timestamp_formatted": "13:50",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.754,
+      "has_audio": false,
+      "audio_window": {
+        "start": 761.2,
+        "end": 830.4,
+        "duration": 69.2
+      },
+      "preview_image": "transition_previews/transition_014.jpg",
+      "notes": ""
+    },
+    {
+      "index": 15,
+      "timestamp": 856.4,
+      "timestamp_formatted": "14:16",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.285,
+      "has_audio": false,
+      "audio_window": {
+        "start": 830.4,
+        "end": 856.4,
+        "duration": 26.0
+      },
+      "preview_image": "transition_previews/transition_015.jpg",
+      "notes": ""
+    },
+    {
+      "index": 16,
+      "timestamp": 888.8,
+      "timestamp_formatted": "14:48",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.841,
+      "has_audio": false,
+      "audio_window": {
+        "start": 856.4,
+        "end": 888.8,
+        "duration": 32.4
+      },
+      "preview_image": "transition_previews/transition_016.jpg",
+      "notes": ""
+    },
+    {
+      "index": 17,
+      "timestamp": 932.8,
+      "timestamp_formatted": "15:32",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.353,
+      "has_audio": false,
+      "audio_window": {
+        "start": 888.8,
+        "end": 932.8,
+        "duration": 44.0
+      },
+      "preview_image": "transition_previews/transition_017.jpg",
+      "notes": ""
+    },
+    {
+      "index": 18,
+      "timestamp": 1026.8,
+      "timestamp_formatted": "17:06",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.43,
+      "has_audio": false,
+      "audio_window": {
+        "start": 932.8,
+        "end": 1026.8,
+        "duration": 94.0
+      },
+      "preview_image": "transition_previews/transition_018.jpg",
+      "notes": ""
+    },
+    {
+      "index": 19,
+      "timestamp": 1075.4,
+      "timestamp_formatted": "17:55",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.495,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1026.8,
+        "end": 1075.4,
+        "duration": 48.6
+      },
+      "preview_image": "transition_previews/transition_019.jpg",
+      "notes": ""
+    },
+    {
+      "index": 20,
+      "timestamp": 1112.0,
+      "timestamp_formatted": "18:32",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.074,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1075.4,
+        "end": 1112.0,
+        "duration": 36.6
+      },
+      "preview_image": "transition_previews/transition_020.jpg",
+      "notes": ""
+    },
+    {
+      "index": 21,
+      "timestamp": 1135.0,
+      "timestamp_formatted": "18:55",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.622,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1112.0,
+        "end": 1135.0,
+        "duration": 23.0
+      },
+      "preview_image": "transition_previews/transition_021.jpg",
+      "notes": ""
+    },
+    {
+      "index": 22,
+      "timestamp": 1193.2,
+      "timestamp_formatted": "19:53",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.888,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1135.0,
+        "end": 1193.2,
+        "duration": 58.2
+      },
+      "preview_image": "transition_previews/transition_022.jpg",
+      "notes": ""
+    },
+    {
+      "index": 23,
+      "timestamp": 1298.0,
+      "timestamp_formatted": "21:38",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.394,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1193.2,
+        "end": 1298.0,
+        "duration": 104.8
+      },
+      "preview_image": "transition_previews/transition_023.jpg",
+      "notes": ""
+    },
+    {
+      "index": 24,
+      "timestamp": 1377.8,
+      "timestamp_formatted": "22:57",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.563,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1298.0,
+        "end": 1377.8,
+        "duration": 79.8
+      },
+      "preview_image": "transition_previews/transition_024.jpg",
+      "notes": ""
+    },
+    {
+      "index": 25,
+      "timestamp": 1441.4,
+      "timestamp_formatted": "24:01",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.185,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1377.8,
+        "end": 1441.4,
+        "duration": 63.6
+      },
+      "preview_image": "transition_previews/transition_025.jpg",
+      "notes": ""
+    },
+    {
+      "index": 26,
+      "timestamp": 1466.9,
+      "timestamp_formatted": "24:26",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.438,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1441.4,
+        "end": 1466.9,
+        "duration": 25.5
+      },
+      "preview_image": "transition_previews/transition_026.jpg",
+      "notes": ""
+    }
+  ]
+}

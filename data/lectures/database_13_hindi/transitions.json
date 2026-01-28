@@ -1,0 +1,393 @@
+{
+  "video_id": "database_13_hindi",
+  "generated_at": "2026-01-27T10:48:03.187311",
+  "total_transitions": 24,
+  "blank_count": 3,
+  "content_count": 21,
+  "transitions": [
+    {
+      "index": 1,
+      "timestamp": 37.4,
+      "timestamp_formatted": "00:37",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.039,
+      "has_audio": false,
+      "audio_window": {
+        "start": 0.0,
+        "end": 37.4,
+        "duration": 37.4
+      },
+      "preview_image": "transition_previews/transition_001.jpg",
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "timestamp": 175.4,
+      "timestamp_formatted": "02:55",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.038,
+      "has_audio": false,
+      "audio_window": {
+        "start": 37.4,
+        "end": 175.4,
+        "duration": 138.0
+      },
+      "preview_image": "transition_previews/transition_002.jpg",
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "timestamp": 255.79,
+      "timestamp_formatted": "04:15",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.241,
+      "has_audio": false,
+      "audio_window": {
+        "start": 175.4,
+        "end": 255.79,
+        "duration": 80.4
+      },
+      "preview_image": "transition_previews/transition_003.jpg",
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "timestamp": 263.39,
+      "timestamp_formatted": "04:23",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.547,
+      "has_audio": false,
+      "audio_window": {
+        "start": 255.79,
+        "end": 263.39,
+        "duration": 7.6
+      },
+      "preview_image": "transition_previews/transition_004.jpg",
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "timestamp": 351.59,
+      "timestamp_formatted": "05:51",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.472,
+      "has_audio": false,
+      "audio_window": {
+        "start": 263.39,
+        "end": 351.59,
+        "duration": 88.2
+      },
+      "preview_image": "transition_previews/transition_005.jpg",
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "timestamp": 358.19,
+      "timestamp_formatted": "05:58",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.472,
+      "has_audio": false,
+      "audio_window": {
+        "start": 351.59,
+        "end": 358.19,
+        "duration": 6.6
+      },
+      "preview_image": "transition_previews/transition_006.jpg",
+      "notes": ""
+    },
+    {
+      "index": 7,
+      "timestamp": 404.99,
+      "timestamp_formatted": "06:44",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.417,
+      "has_audio": false,
+      "audio_window": {
+        "start": 358.19,
+        "end": 404.99,
+        "duration": 46.8
+      },
+      "preview_image": "transition_previews/transition_007.jpg",
+      "notes": ""
+    },
+    {
+      "index": 8,
+      "timestamp": 589.98,
+      "timestamp_formatted": "09:49",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.696,
+      "has_audio": false,
+      "audio_window": {
+        "start": 404.99,
+        "end": 589.98,
+        "duration": 184.99
+      },
+      "preview_image": "transition_previews/transition_008.jpg",
+      "notes": ""
+    },
+    {
+      "index": 9,
+      "timestamp": 609.78,
+      "timestamp_formatted": "10:09",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.254,
+      "has_audio": false,
+      "audio_window": {
+        "start": 589.98,
+        "end": 609.78,
+        "duration": 19.8
+      },
+      "preview_image": "transition_previews/transition_009.jpg",
+      "notes": ""
+    },
+    {
+      "index": 10,
+      "timestamp": 628.18,
+      "timestamp_formatted": "10:28",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.376,
+      "has_audio": false,
+      "audio_window": {
+        "start": 609.78,
+        "end": 628.18,
+        "duration": 18.4
+      },
+      "preview_image": "transition_previews/transition_010.jpg",
+      "notes": ""
+    },
+    {
+      "index": 11,
+      "timestamp": 634.18,
+      "timestamp_formatted": "10:34",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.723,
+      "has_audio": false,
+      "audio_window": {
+        "start": 628.18,
+        "end": 634.18,
+        "duration": 6.0
+      },
+      "preview_image": "transition_previews/transition_011.jpg",
+      "notes": ""
+    },
+    {
+      "index": 12,
+      "timestamp": 677.18,
+      "timestamp_formatted": "11:17",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.259,
+      "has_audio": false,
+      "audio_window": {
+        "start": 634.18,
+        "end": 677.18,
+        "duration": 43.0
+      },
+      "preview_image": "transition_previews/transition_012.jpg",
+      "notes": ""
+    },
+    {
+      "index": 13,
+      "timestamp": 720.78,
+      "timestamp_formatted": "12:00",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.432,
+      "has_audio": false,
+      "audio_window": {
+        "start": 677.18,
+        "end": 720.78,
+        "duration": 43.6
+      },
+      "preview_image": "transition_previews/transition_013.jpg",
+      "notes": ""
+    },
+    {
+      "index": 14,
+      "timestamp": 828.58,
+      "timestamp_formatted": "13:48",
+      "is_blank": true,
+      "ssim_score": null,
+      "edge_count": 0.029,
+      "has_audio": false,
+      "audio_window": {
+        "start": 720.78,
+        "end": 828.58,
+        "duration": 107.8
+      },
+      "preview_image": "transition_previews/transition_014.jpg",
+      "notes": ""
+    },
+    {
+      "index": 15,
+      "timestamp": 936.77,
+      "timestamp_formatted": "15:36",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.306,
+      "has_audio": false,
+      "audio_window": {
+        "start": 828.58,
+        "end": 936.77,
+        "duration": 108.2
+      },
+      "preview_image": "transition_previews/transition_015.jpg",
+      "notes": ""
+    },
+    {
+      "index": 16,
+      "timestamp": 958.57,
+      "timestamp_formatted": "15:58",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.336,
+      "has_audio": false,
+      "audio_window": {
+        "start": 936.77,
+        "end": 958.57,
+        "duration": 21.8
+      },
+      "preview_image": "transition_previews/transition_016.jpg",
+      "notes": ""
+    },
+    {
+      "index": 17,
+      "timestamp": 974.97,
+      "timestamp_formatted": "16:14",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.234,
+      "has_audio": false,
+      "audio_window": {
+        "start": 958.57,
+        "end": 974.97,
+        "duration": 16.4
+      },
+      "preview_image": "transition_previews/transition_017.jpg",
+      "notes": ""
+    },
+    {
+      "index": 18,
+      "timestamp": 1004.17,
+      "timestamp_formatted": "16:44",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.666,
+      "has_audio": false,
+      "audio_window": {
+        "start": 974.97,
+        "end": 1004.17,
+        "duration": 29.2
+      },
+      "preview_image": "transition_previews/transition_018.jpg",
+      "notes": ""
+    },
+    {
+      "index": 19,
+      "timestamp": 1012.17,
+      "timestamp_formatted": "16:52",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.811,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1004.17,
+        "end": 1012.17,
+        "duration": 8.0
+      },
+      "preview_image": "transition_previews/transition_019.jpg",
+      "notes": ""
+    },
+    {
+      "index": 20,
+      "timestamp": 1101.57,
+      "timestamp_formatted": "18:21",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.365,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1012.17,
+        "end": 1101.57,
+        "duration": 89.4
+      },
+      "preview_image": "transition_previews/transition_020.jpg",
+      "notes": ""
+    },
+    {
+      "index": 21,
+      "timestamp": 1121.77,
+      "timestamp_formatted": "18:41",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.315,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1101.57,
+        "end": 1121.77,
+        "duration": 20.2
+      },
+      "preview_image": "transition_previews/transition_021.jpg",
+      "notes": ""
+    },
+    {
+      "index": 22,
+      "timestamp": 1126.37,
+      "timestamp_formatted": "18:46",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.737,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1121.77,
+        "end": 1126.37,
+        "duration": 4.6
+      },
+      "preview_image": "transition_previews/transition_022.jpg",
+      "notes": ""
+    },
+    {
+      "index": 23,
+      "timestamp": 1140.77,
+      "timestamp_formatted": "19:00",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.802,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1126.37,
+        "end": 1140.77,
+        "duration": 14.4
+      },
+      "preview_image": "transition_previews/transition_023.jpg",
+      "notes": ""
+    },
+    {
+      "index": 24,
+      "timestamp": 1189.63,
+      "timestamp_formatted": "19:49",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.745,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1140.77,
+        "end": 1189.63,
+        "duration": 48.87
+      },
+      "preview_image": "transition_previews/transition_024.jpg",
+      "notes": ""
+    }
+  ]
+}

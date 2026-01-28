@@ -1,0 +1,264 @@
+{
+  "video_id": "database_13_hindi",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "database_13_hindi_slide_001.png",
+      "timestamp": 37.4,
+      "is_blank": true,
+      "edge_count": 0.039,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 37.4,
+      "audio_duration": 37.4
+    },
+    {
+      "slide_number": 2,
+      "filename": "database_13_hindi_slide_002.png",
+      "timestamp": 175.4,
+      "is_blank": true,
+      "edge_count": 0.038,
+      "ssim_from_prev": 0.893,
+      "audio_window_start": 37.4,
+      "audio_window_end": 175.4,
+      "audio_duration": 138.0
+    },
+    {
+      "slide_number": 3,
+      "filename": "database_13_hindi_slide_003.png",
+      "timestamp": 255.79,
+      "is_blank": false,
+      "edge_count": 0.241,
+      "ssim_from_prev": 0.771,
+      "audio_window_start": 175.4,
+      "audio_window_end": 255.79,
+      "audio_duration": 80.4
+    },
+    {
+      "slide_number": 4,
+      "filename": "database_13_hindi_slide_004.png",
+      "timestamp": 263.39,
+      "is_blank": false,
+      "edge_count": 0.547,
+      "ssim_from_prev": 0.593,
+      "audio_window_start": 255.79,
+      "audio_window_end": 263.39,
+      "audio_duration": 7.6
+    },
+    {
+      "slide_number": 5,
+      "filename": "database_13_hindi_slide_005.png",
+      "timestamp": 351.59,
+      "is_blank": false,
+      "edge_count": 0.472,
+      "ssim_from_prev": 0.846,
+      "audio_window_start": 263.39,
+      "audio_window_end": 351.59,
+      "audio_duration": 88.2
+    },
+    {
+      "slide_number": 6,
+      "filename": "database_13_hindi_slide_006.png",
+      "timestamp": 358.19,
+      "is_blank": false,
+      "edge_count": 0.472,
+      "ssim_from_prev": 0.551,
+      "audio_window_start": 351.59,
+      "audio_window_end": 358.19,
+      "audio_duration": 6.6
+    },
+    {
+      "slide_number": 7,
+      "filename": "database_13_hindi_slide_007.png",
+      "timestamp": 404.99,
+      "is_blank": false,
+      "edge_count": 0.417,
+      "ssim_from_prev": 0.587,
+      "audio_window_start": 358.19,
+      "audio_window_end": 404.99,
+      "audio_duration": 46.8
+    },
+    {
+      "slide_number": 8,
+      "filename": "database_13_hindi_slide_008.png",
+      "timestamp": 589.98,
+      "is_blank": false,
+      "edge_count": 0.696,
+      "ssim_from_prev": 0.644,
+      "audio_window_start": 404.99,
+      "audio_window_end": 589.98,
+      "audio_duration": 184.99
+    },
+    {
+      "slide_number": 9,
+      "filename": "database_13_hindi_slide_009.png",
+      "timestamp": 609.78,
+      "is_blank": false,
+      "edge_count": 0.254,
+      "ssim_from_prev": 0.672,
+      "audio_window_start": 589.98,
+      "audio_window_end": 609.78,
+      "audio_duration": 19.8
+    },
+    {
+      "slide_number": 10,
+      "filename": "database_13_hindi_slide_010.png",
+      "timestamp": 628.18,
+      "is_blank": false,
+      "edge_count": 0.376,
+      "ssim_from_prev": 0.661,
+      "audio_window_start": 609.78,
+      "audio_window_end": 628.18,
+      "audio_duration": 18.4
+    },
+    {
+      "slide_number": 11,
+      "filename": "database_13_hindi_slide_011.png",
+      "timestamp": 634.18,
+      "is_blank": false,
+      "edge_count": 0.723,
+      "ssim_from_prev": 0.498,
+      "audio_window_start": 628.18,
+      "audio_window_end": 634.18,
+      "audio_duration": 6.0
+    },
+    {
+      "slide_number": 12,
+      "filename": "database_13_hindi_slide_012.png",
+      "timestamp": 677.18,
+      "is_blank": false,
+      "edge_count": 0.259,
+      "ssim_from_prev": 0.506,
+      "audio_window_start": 634.18,
+      "audio_window_end": 677.18,
+      "audio_duration": 43.0
+    },
+    {
+      "slide_number": 13,
+      "filename": "database_13_hindi_slide_013.png",
+      "timestamp": 720.78,
+      "is_blank": false,
+      "edge_count": 0.432,
+      "ssim_from_prev": 0.644,
+      "audio_window_start": 677.18,
+      "audio_window_end": 720.78,
+      "audio_duration": 43.6
+    },
+    {
+      "slide_number": 14,
+      "filename": "database_13_hindi_slide_014.png",
+      "timestamp": 828.58,
+      "is_blank": true,
+      "edge_count": 0.029,
+      "ssim_from_prev": 0.702,
+      "audio_window_start": 720.78,
+      "audio_window_end": 828.58,
+      "audio_duration": 107.8
+    },
+    {
+      "slide_number": 15,
+      "filename": "database_13_hindi_slide_015.png",
+      "timestamp": 936.77,
+      "is_blank": false,
+      "edge_count": 0.306,
+      "ssim_from_prev": 0.63,
+      "audio_window_start": 828.58,
+      "audio_window_end": 936.77,
+      "audio_duration": 108.2
+    },
+    {
+      "slide_number": 16,
+      "filename": "database_13_hindi_slide_016.png",
+      "timestamp": 958.57,
+      "is_blank": false,
+      "edge_count": 0.336,
+      "ssim_from_prev": 0.636,
+      "audio_window_start": 936.77,
+      "audio_window_end": 958.57,
+      "audio_duration": 21.8
+    },
+    {
+      "slide_number": 17,
+      "filename": "database_13_hindi_slide_017.png",
+      "timestamp": 974.97,
+      "is_blank": false,
+      "edge_count": 0.234,
+      "ssim_from_prev": 0.648,
+      "audio_window_start": 958.57,
+      "audio_window_end": 974.97,
+      "audio_duration": 16.4
+    },
+    {
+      "slide_number": 18,
+      "filename": "database_13_hindi_slide_018.png",
+      "timestamp": 1004.17,
+      "is_blank": false,
+      "edge_count": 0.666,
+      "ssim_from_prev": 0.552,
+      "audio_window_start": 974.97,
+      "audio_window_end": 1004.17,
+      "audio_duration": 29.2
+    },
+    {
+      "slide_number": 19,
+      "filename": "database_13_hindi_slide_019.png",
+      "timestamp": 1012.17,
+      "is_blank": false,
+      "edge_count": 0.811,
+      "ssim_from_prev": 0.449,
+      "audio_window_start": 1004.17,
+      "audio_window_end": 1012.17,
+      "audio_duration": 8.0
+    },
+    {
+      "slide_number": 20,
+      "filename": "database_13_hindi_slide_020.png",
+      "timestamp": 1101.57,
+      "is_blank": false,
+      "edge_count": 0.365,
+      "ssim_from_prev": 0.477,
+      "audio_window_start": 1012.17,
+      "audio_window_end": 1101.57,
+      "audio_duration": 89.4
+    },
+    {
+      "slide_number": 21,
+      "filename": "database_13_hindi_slide_021.png",
+      "timestamp": 1121.77,
+      "is_blank": false,
+      "edge_count": 0.315,
+      "ssim_from_prev": 0.639,
+      "audio_window_start": 1101.57,
+      "audio_window_end": 1121.77,
+      "audio_duration": 20.2
+    },
+    {
+      "slide_number": 22,
+      "filename": "database_13_hindi_slide_022.png",
+      "timestamp": 1126.37,
+      "is_blank": false,
+      "edge_count": 0.737,
+      "ssim_from_prev": 0.532,
+      "audio_window_start": 1121.77,
+      "audio_window_end": 1126.37,
+      "audio_duration": 4.6
+    },
+    {
+      "slide_number": 23,
+      "filename": "database_13_hindi_slide_023.png",
+      "timestamp": 1140.77,
+      "is_blank": false,
+      "edge_count": 0.802,
+      "ssim_from_prev": 0.416,
+      "audio_window_start": 1126.37,
+      "audio_window_end": 1140.77,
+      "audio_duration": 14.4
+    }
+  ]
+}

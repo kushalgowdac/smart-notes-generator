@@ -1,0 +1,99 @@
+{
+  "video_id": "computer_networks_13_hindi",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "computer_networks_13_hindi_slide_001.png",
+      "timestamp": 5.6,
+      "is_blank": false,
+      "edge_count": 0.889,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 5.6,
+      "audio_duration": 5.6
+    },
+    {
+      "slide_number": 2,
+      "filename": "computer_networks_13_hindi_slide_002.png",
+      "timestamp": 193.0,
+      "is_blank": false,
+      "edge_count": 0.264,
+      "ssim_from_prev": 0.556,
+      "audio_window_start": 5.6,
+      "audio_window_end": 193.0,
+      "audio_duration": 187.4
+    },
+    {
+      "slide_number": 3,
+      "filename": "computer_networks_13_hindi_slide_003.png",
+      "timestamp": 285.0,
+      "is_blank": true,
+      "edge_count": 0.032,
+      "ssim_from_prev": 0.809,
+      "audio_window_start": 193.0,
+      "audio_window_end": 285.0,
+      "audio_duration": 92.0
+    },
+    {
+      "slide_number": 4,
+      "filename": "computer_networks_13_hindi_slide_004.png",
+      "timestamp": 674.59,
+      "is_blank": false,
+      "edge_count": 0.184,
+      "ssim_from_prev": 0.828,
+      "audio_window_start": 285.0,
+      "audio_window_end": 674.59,
+      "audio_duration": 389.6
+    },
+    {
+      "slide_number": 5,
+      "filename": "computer_networks_13_hindi_slide_005.png",
+      "timestamp": 771.79,
+      "is_blank": false,
+      "edge_count": 0.529,
+      "ssim_from_prev": 0.721,
+      "audio_window_start": 674.59,
+      "audio_window_end": 771.79,
+      "audio_duration": 97.2
+    },
+    {
+      "slide_number": 6,
+      "filename": "computer_networks_13_hindi_slide_006.png",
+      "timestamp": 1006.39,
+      "is_blank": false,
+      "edge_count": 0.231,
+      "ssim_from_prev": 0.825,
+      "audio_window_start": 771.79,
+      "audio_window_end": 1006.39,
+      "audio_duration": 234.6
+    },
+    {
+      "slide_number": 7,
+      "filename": "computer_networks_13_hindi_slide_007.png",
+      "timestamp": 1131.19,
+      "is_blank": false,
+      "edge_count": 0.783,
+      "ssim_from_prev": 0.565,
+      "audio_window_start": 1006.39,
+      "audio_window_end": 1131.19,
+      "audio_duration": 124.8
+    },
+    {
+      "slide_number": 8,
+      "filename": "computer_networks_13_hindi_slide_008.png",
+      "timestamp": 1245.59,
+      "is_blank": false,
+      "edge_count": 0.774,
+      "ssim_from_prev": 0.851,
+      "audio_window_start": 1131.19,
+      "audio_window_end": 1245.59,
+      "audio_duration": 114.4
+    }
+  ]
+}

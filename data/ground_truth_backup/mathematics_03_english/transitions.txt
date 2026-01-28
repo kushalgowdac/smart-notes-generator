@@ -1,0 +1,35 @@
+# Detected transitions (standardized format)
+# Format: timestamp in seconds
+# Total: 0 transitions
+
+41
+54
+156
+163
+189
+201
+267
+275
+315
+331
+415
+430
+475
+499
+585
+595
+626
+649
+663
+672
+738
+747
+783
+792
+813
+820
+887
+899
+925
+932
+997

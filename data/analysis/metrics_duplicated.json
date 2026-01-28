@@ -1,0 +1,13 @@
+{
+  "total_frames": 21707,
+  "manual_positives": 836,
+  "predicted_positives": 836,
+  "true_negatives": 20871,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "true_positives": 836,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0
+}

@@ -1,0 +1,122 @@
+{
+  "video_id": "input_video_1",
+  "extraction_method": "content_first_enhanced_v2",
+  "extraction_params": {
+    "lookback_seconds": 10.0,
+    "sampling_fps": 10,
+    "scoring_formula": "Quality \u00d7 TeacherPenalty \u00d7 (1 + Proximity \u00d7 0.15)",
+    "quality_formula": "(Sharpness \u00d7 Brightness \u00d7 \u221b(Board \u00d7 Edges \u00d7 Distribution))",
+    "teacher_penalty": "1 / (1 + teacher_presence \u00d7 5)",
+    "optimization": "10 FPS sampling for 3x speedup"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "input_video_1_slide_001.png",
+      "capture_timestamp": 3.6,
+      "transition_timestamp": 5.2,
+      "audio_start_time": 0.0,
+      "audio_end_time": 5.2,
+      "transition_was_blank": false,
+      "scoring": {
+        "final_score": 0.13359966930684297,
+        "quality_score": 0.15238827847307465,
+        "content_score": 0.26865876695609675,
+        "board_visibility_score": 0.944170579029734,
+        "edge_score_normalized": 0.02857736697965571,
+        "edge_count": 11687,
+        "distribution_score": 0.7186714232208161,
+        "sharpness_score": 1.0,
+        "brightness_quality": 0.567218707208529,
+        "teacher_presence": 0.055929675273865415,
+        "teacher_penalty": 0.7814646730043472,
+        "proximity_bias": 0.8125,
+        "proximity_multiplier": 1.121875,
+        "window_start": 1.0,
+        "window_end": 4.2,
+        "frames_evaluated": 97
+      }
+    },
+    {
+      "slide_number": 2,
+      "filename": "input_video_1_slide_002.png",
+      "capture_timestamp": 111.8,
+      "transition_timestamp": 113.0,
+      "audio_start_time": 5.2,
+      "audio_end_time": 113.0,
+      "transition_was_blank": false,
+      "scoring": {
+        "final_score": 0.14769085139402055,
+        "quality_score": 0.18510456446541798,
+        "content_score": 0.3065635681875501,
+        "board_visibility_score": 0.9105609350547731,
+        "edge_score_normalized": 0.0414612676056338,
+        "edge_count": 16956,
+        "distribution_score": 0.7631502256121481,
+        "sharpness_score": 1.0,
+        "brightness_quality": 0.6038048342136151,
+        "teacher_presence": 0.08742908841940532,
+        "teacher_penalty": 0.6958237981403184,
+        "proximity_bias": 0.9777777777777774,
+        "proximity_multiplier": 1.1466666666666665,
+        "window_start": 103.0,
+        "window_end": 112.0,
+        "frames_evaluated": 271
+      }
+    },
+    {
+      "slide_number": 3,
+      "filename": "input_video_1_slide_003.png",
+      "capture_timestamp": 228.0,
+      "transition_timestamp": 229.0,
+      "audio_start_time": 113.0,
+      "audio_end_time": 229.0,
+      "transition_was_blank": false,
+      "scoring": {
+        "final_score": 0.15429040559451698,
+        "quality_score": 0.16266459950570133,
+        "content_score": 0.2762980506584247,
+        "board_visibility_score": 0.9442634976525821,
+        "edge_score_normalized": 0.03235279733959311,
+        "edge_count": 13231,
+        "distribution_score": 0.690443942663034,
+        "sharpness_score": 1.0,
+        "brightness_quality": 0.5887287265258216,
+        "teacher_presence": 0.04248337245696401,
+        "teacher_penalty": 0.8247988221769558,
+        "proximity_bias": 1.0,
+        "proximity_multiplier": 1.15,
+        "window_start": 219.0,
+        "window_end": 228.0,
+        "frames_evaluated": 271
+      }
+    },
+    {
+      "slide_number": 4,
+      "filename": "input_video_1_slide_004.png",
+      "capture_timestamp": 277.3,
+      "transition_timestamp": 279.8,
+      "audio_start_time": 229.0,
+      "audio_end_time": 279.8,
+      "transition_was_blank": false,
+      "scoring": {
+        "final_score": 0.1894026933659172,
+        "quality_score": 0.21466297258894945,
+        "content_score": 0.2922886568826894,
+        "board_visibility_score": 0.9234570618153365,
+        "edge_score_normalized": 0.03885710093896714,
+        "edge_count": 15891,
+        "distribution_score": 0.6959031183410005,
+        "sharpness_score": 1.0,
+        "brightness_quality": 0.7344211536580595,
+        "teacher_presence": 0.05500782472613459,
+        "teacher_penalty": 0.7842896594047254,
+        "proximity_bias": 0.8333333333333334,
+        "proximity_multiplier": 1.125,
+        "window_start": 269.8,
+        "window_end": 278.8,
+        "frames_evaluated": 271
+      }
+    }
+  ]
+}

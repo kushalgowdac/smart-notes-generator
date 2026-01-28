@@ -1,0 +1,55 @@
+{
+  "video_id": "database_12_hindi",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "database_12_hindi_slide_001.png",
+      "timestamp": 145.0,
+      "is_blank": false,
+      "edge_count": 0.273,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 145.0,
+      "audio_duration": 145.0
+    },
+    {
+      "slide_number": 2,
+      "filename": "database_12_hindi_slide_002.png",
+      "timestamp": 368.6,
+      "is_blank": false,
+      "edge_count": 0.206,
+      "ssim_from_prev": 0.757,
+      "audio_window_start": 145.0,
+      "audio_window_end": 368.6,
+      "audio_duration": 223.6
+    },
+    {
+      "slide_number": 3,
+      "filename": "database_12_hindi_slide_003.png",
+      "timestamp": 626.4,
+      "is_blank": false,
+      "edge_count": 0.121,
+      "ssim_from_prev": 0.864,
+      "audio_window_start": 368.6,
+      "audio_window_end": 626.4,
+      "audio_duration": 257.8
+    },
+    {
+      "slide_number": 4,
+      "filename": "database_12_hindi_slide_004.png",
+      "timestamp": 1183.2,
+      "is_blank": false,
+      "edge_count": 0.891,
+      "ssim_from_prev": 0.74,
+      "audio_window_start": 626.4,
+      "audio_window_end": 1183.2,
+      "audio_duration": 556.8
+    }
+  ]
+}

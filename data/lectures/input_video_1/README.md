@@ -1,0 +1,69 @@
+# input_video_1
+
+## Video Information
+- **Duration**: 05:20 (320.17s)
+- **Total Transitions Detected**: 4
+- **Content Slides**: 4
+- **Blank Slides**: 0
+- **Processed**: 2026-01-27 23:20:16
+
+## Pipeline Details
+- **Model**: xgboost_model_20260126_160645.pkl
+- **Prediction Threshold**: 0.01
+- **SSIM Dedup Threshold**: 0.92
+- **F1-Score**: 98.68% (on test set)
+
+## Output Structure
+```
+input_video_1/
+├── audio/                    # Extracted audio WAV
+├── slides/                   # Best quality slide PNGs
+├── transition_previews/      # Preview JPEGs (640px)
+├── transitions.json          # Deduplicated timestamps + metadata
+├── metadata.json             # Slide extraction details
+└── README.md                 # This file
+```
+
+## Usage
+
+### Extract Audio Segment
+```python
+import json
+with open('transitions.json') as f:
+    data = json.load(f)
+    
+# Get audio for slide 1
+slide_1 = data['transitions'][0]
+start = slide_1['audio_window']['start']
+end = slide_1['audio_window']['end']
+
+# Use ffmpeg
+ffmpeg -i audio/input_video_1.wav -ss {start} -to {end} slide_1_audio.wav
+```
+
+### View Slide with Timestamp
+```python
+# Load metadata
+with open('metadata.json') as f:
+    meta = json.load(f)
+    
+for slide in meta['slides']:
+    print(f"Slide {slide['slide_number']}: {slide['filename']}")
+    print(f"  Captured at: {slide['capture_timestamp']}s")
+    print(f"  Quality Score: {slide['scoring']['quality_score']:.3f}")
+```
+
+## Slide Quality Metrics
+Each slide is scored on:
+- **Board Visibility** (blackboard/whiteboard/greenboard detection)
+- **Edge Density** (text/chalk clarity)
+- **Distribution** (text spread across frame)
+- **Sharpness** (motion blur detection)
+- **Brightness** (exposure quality)
+- **Proximity** (position in adaptive window)
+
+## Next Steps
+1. Review slides in `slides/` folder
+2. Extract audio segments for each slide
+3. Use multimodal AI (GPT-4 Vision/Gemini) for note generation
+4. Combine slide images + audio + AI notes into final document

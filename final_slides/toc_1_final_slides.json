@@ -1,0 +1,94 @@
+{
+  "toc_1": [
+    {
+      "slide_number": 1,
+      "timestamp": 84.4,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 84.4,
+      "audio_duration": 84.4
+    },
+    {
+      "slide_number": 2,
+      "timestamp": 195.4,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.797,
+      "audio_window_start": 84.4,
+      "audio_window_end": 195.4,
+      "audio_duration": 111.0
+    },
+    {
+      "slide_number": 3,
+      "timestamp": 391.6,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.85,
+      "audio_window_start": 195.4,
+      "audio_window_end": 391.6,
+      "audio_duration": 196.2
+    },
+    {
+      "slide_number": 4,
+      "timestamp": 430.2,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.779,
+      "audio_window_start": 391.6,
+      "audio_window_end": 430.2,
+      "audio_duration": 38.6
+    },
+    {
+      "slide_number": 5,
+      "timestamp": 478.0,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.765,
+      "audio_window_start": 430.2,
+      "audio_window_end": 478.0,
+      "audio_duration": 47.8
+    },
+    {
+      "slide_number": 6,
+      "timestamp": 588.4,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.848,
+      "audio_window_start": 478.0,
+      "audio_window_end": 588.4,
+      "audio_duration": 110.4
+    },
+    {
+      "slide_number": 7,
+      "timestamp": 874.8,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.908,
+      "audio_window_start": 588.4,
+      "audio_window_end": 874.8,
+      "audio_duration": 286.4
+    },
+    {
+      "slide_number": 8,
+      "timestamp": 1195.0,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.85,
+      "audio_window_start": 874.8,
+      "audio_window_end": 1195.0,
+      "audio_duration": 320.2
+    },
+    {
+      "slide_number": 9,
+      "timestamp": 1265.36,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.77,
+      "audio_window_start": 1195.0,
+      "audio_window_end": 1265.36,
+      "audio_duration": 70.37
+    }
+  ]
+}

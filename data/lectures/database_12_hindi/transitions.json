@@ -1,0 +1,89 @@
+{
+  "video_id": "database_12_hindi",
+  "generated_at": "2026-01-27T10:48:02.808498",
+  "total_transitions": 5,
+  "blank_count": 0,
+  "content_count": 5,
+  "transitions": [
+    {
+      "index": 1,
+      "timestamp": 145.0,
+      "timestamp_formatted": "02:25",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.273,
+      "has_audio": false,
+      "audio_window": {
+        "start": 0.0,
+        "end": 145.0,
+        "duration": 145.0
+      },
+      "preview_image": "transition_previews/transition_001.jpg",
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "timestamp": 368.6,
+      "timestamp_formatted": "06:08",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.206,
+      "has_audio": false,
+      "audio_window": {
+        "start": 145.0,
+        "end": 368.6,
+        "duration": 223.6
+      },
+      "preview_image": "transition_previews/transition_002.jpg",
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "timestamp": 626.4,
+      "timestamp_formatted": "10:26",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.121,
+      "has_audio": false,
+      "audio_window": {
+        "start": 368.6,
+        "end": 626.4,
+        "duration": 257.8
+      },
+      "preview_image": "transition_previews/transition_003.jpg",
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "timestamp": 1183.2,
+      "timestamp_formatted": "19:43",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.891,
+      "has_audio": false,
+      "audio_window": {
+        "start": 626.4,
+        "end": 1183.2,
+        "duration": 556.8
+      },
+      "preview_image": "transition_previews/transition_004.jpg",
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "timestamp": 1195.73,
+      "timestamp_formatted": "19:55",
+      "is_blank": false,
+      "ssim_score": null,
+      "edge_count": 0.978,
+      "has_audio": false,
+      "audio_window": {
+        "start": 1183.2,
+        "end": 1195.73,
+        "duration": 12.53
+      },
+      "preview_image": "transition_previews/transition_005.jpg",
+      "notes": ""
+    }
+  ]
+}

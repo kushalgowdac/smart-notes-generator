@@ -1,0 +1,341 @@
+{
+  "video_id": "chemistry_08_hindi",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "chemistry_08_hindi_slide_001.png",
+      "timestamp": 41.4,
+      "is_blank": false,
+      "edge_count": 0.641,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 41.4,
+      "audio_duration": 41.4
+    },
+    {
+      "slide_number": 2,
+      "filename": "chemistry_08_hindi_slide_002.png",
+      "timestamp": 92.0,
+      "is_blank": false,
+      "edge_count": 0.692,
+      "ssim_from_prev": 0.675,
+      "audio_window_start": 41.4,
+      "audio_window_end": 92.0,
+      "audio_duration": 50.6
+    },
+    {
+      "slide_number": 3,
+      "filename": "chemistry_08_hindi_slide_003.png",
+      "timestamp": 144.2,
+      "is_blank": false,
+      "edge_count": 0.512,
+      "ssim_from_prev": 0.679,
+      "audio_window_start": 92.0,
+      "audio_window_end": 144.2,
+      "audio_duration": 52.2
+    },
+    {
+      "slide_number": 4,
+      "filename": "chemistry_08_hindi_slide_004.png",
+      "timestamp": 159.2,
+      "is_blank": false,
+      "edge_count": 0.312,
+      "ssim_from_prev": 0.734,
+      "audio_window_start": 144.2,
+      "audio_window_end": 159.2,
+      "audio_duration": 15.0
+    },
+    {
+      "slide_number": 5,
+      "filename": "chemistry_08_hindi_slide_005.png",
+      "timestamp": 162.0,
+      "is_blank": false,
+      "edge_count": 0.452,
+      "ssim_from_prev": 0.756,
+      "audio_window_start": 159.2,
+      "audio_window_end": 162.0,
+      "audio_duration": 2.8
+    },
+    {
+      "slide_number": 6,
+      "filename": "chemistry_08_hindi_slide_006.png",
+      "timestamp": 175.2,
+      "is_blank": false,
+      "edge_count": 0.509,
+      "ssim_from_prev": 0.72,
+      "audio_window_start": 162.0,
+      "audio_window_end": 175.2,
+      "audio_duration": 13.2
+    },
+    {
+      "slide_number": 7,
+      "filename": "chemistry_08_hindi_slide_007.png",
+      "timestamp": 195.2,
+      "is_blank": false,
+      "edge_count": 0.469,
+      "ssim_from_prev": 0.855,
+      "audio_window_start": 175.2,
+      "audio_window_end": 195.2,
+      "audio_duration": 20.0
+    },
+    {
+      "slide_number": 8,
+      "filename": "chemistry_08_hindi_slide_008.png",
+      "timestamp": 217.6,
+      "is_blank": false,
+      "edge_count": 0.394,
+      "ssim_from_prev": 0.739,
+      "audio_window_start": 195.2,
+      "audio_window_end": 217.6,
+      "audio_duration": 22.4
+    },
+    {
+      "slide_number": 9,
+      "filename": "chemistry_08_hindi_slide_009.png",
+      "timestamp": 269.8,
+      "is_blank": false,
+      "edge_count": 0.54,
+      "ssim_from_prev": 0.796,
+      "audio_window_start": 217.6,
+      "audio_window_end": 269.8,
+      "audio_duration": 52.2
+    },
+    {
+      "slide_number": 10,
+      "filename": "chemistry_08_hindi_slide_010.png",
+      "timestamp": 302.6,
+      "is_blank": false,
+      "edge_count": 0.42,
+      "ssim_from_prev": 0.722,
+      "audio_window_start": 269.8,
+      "audio_window_end": 302.6,
+      "audio_duration": 32.8
+    },
+    {
+      "slide_number": 11,
+      "filename": "chemistry_08_hindi_slide_011.png",
+      "timestamp": 309.0,
+      "is_blank": false,
+      "edge_count": 0.849,
+      "ssim_from_prev": 0.663,
+      "audio_window_start": 302.6,
+      "audio_window_end": 309.0,
+      "audio_duration": 6.4
+    },
+    {
+      "slide_number": 12,
+      "filename": "chemistry_08_hindi_slide_012.png",
+      "timestamp": 395.8,
+      "is_blank": false,
+      "edge_count": 0.851,
+      "ssim_from_prev": 0.598,
+      "audio_window_start": 309.0,
+      "audio_window_end": 395.8,
+      "audio_duration": 86.8
+    },
+    {
+      "slide_number": 13,
+      "filename": "chemistry_08_hindi_slide_013.png",
+      "timestamp": 427.4,
+      "is_blank": false,
+      "edge_count": 0.363,
+      "ssim_from_prev": 0.684,
+      "audio_window_start": 395.8,
+      "audio_window_end": 427.4,
+      "audio_duration": 31.6
+    },
+    {
+      "slide_number": 14,
+      "filename": "chemistry_08_hindi_slide_014.png",
+      "timestamp": 437.8,
+      "is_blank": false,
+      "edge_count": 0.473,
+      "ssim_from_prev": 0.796,
+      "audio_window_start": 427.4,
+      "audio_window_end": 437.8,
+      "audio_duration": 10.4
+    },
+    {
+      "slide_number": 15,
+      "filename": "chemistry_08_hindi_slide_015.png",
+      "timestamp": 482.8,
+      "is_blank": false,
+      "edge_count": 0.673,
+      "ssim_from_prev": 0.632,
+      "audio_window_start": 437.8,
+      "audio_window_end": 482.8,
+      "audio_duration": 45.0
+    },
+    {
+      "slide_number": 16,
+      "filename": "chemistry_08_hindi_slide_016.png",
+      "timestamp": 582.6,
+      "is_blank": false,
+      "edge_count": 0.61,
+      "ssim_from_prev": 0.686,
+      "audio_window_start": 482.8,
+      "audio_window_end": 582.6,
+      "audio_duration": 99.8
+    },
+    {
+      "slide_number": 17,
+      "filename": "chemistry_08_hindi_slide_017.png",
+      "timestamp": 696.2,
+      "is_blank": false,
+      "edge_count": 0.553,
+      "ssim_from_prev": 0.685,
+      "audio_window_start": 582.6,
+      "audio_window_end": 696.2,
+      "audio_duration": 113.6
+    },
+    {
+      "slide_number": 18,
+      "filename": "chemistry_08_hindi_slide_018.png",
+      "timestamp": 707.6,
+      "is_blank": false,
+      "edge_count": 0.732,
+      "ssim_from_prev": 0.681,
+      "audio_window_start": 696.2,
+      "audio_window_end": 707.6,
+      "audio_duration": 11.4
+    },
+    {
+      "slide_number": 19,
+      "filename": "chemistry_08_hindi_slide_019.png",
+      "timestamp": 738.8,
+      "is_blank": false,
+      "edge_count": 0.433,
+      "ssim_from_prev": 0.712,
+      "audio_window_start": 707.6,
+      "audio_window_end": 738.8,
+      "audio_duration": 31.2
+    },
+    {
+      "slide_number": 20,
+      "filename": "chemistry_08_hindi_slide_020.png",
+      "timestamp": 751.4,
+      "is_blank": false,
+      "edge_count": 0.682,
+      "ssim_from_prev": 0.725,
+      "audio_window_start": 738.8,
+      "audio_window_end": 751.4,
+      "audio_duration": 12.6
+    },
+    {
+      "slide_number": 21,
+      "filename": "chemistry_08_hindi_slide_021.png",
+      "timestamp": 802.0,
+      "is_blank": false,
+      "edge_count": 0.545,
+      "ssim_from_prev": 0.696,
+      "audio_window_start": 751.4,
+      "audio_window_end": 802.0,
+      "audio_duration": 50.6
+    },
+    {
+      "slide_number": 22,
+      "filename": "chemistry_08_hindi_slide_022.png",
+      "timestamp": 867.4,
+      "is_blank": false,
+      "edge_count": 0.353,
+      "ssim_from_prev": 0.714,
+      "audio_window_start": 802.0,
+      "audio_window_end": 867.4,
+      "audio_duration": 65.4
+    },
+    {
+      "slide_number": 23,
+      "filename": "chemistry_08_hindi_slide_023.png",
+      "timestamp": 874.8,
+      "is_blank": false,
+      "edge_count": 0.603,
+      "ssim_from_prev": 0.736,
+      "audio_window_start": 867.4,
+      "audio_window_end": 874.8,
+      "audio_duration": 7.4
+    },
+    {
+      "slide_number": 24,
+      "filename": "chemistry_08_hindi_slide_024.png",
+      "timestamp": 955.4,
+      "is_blank": false,
+      "edge_count": 0.346,
+      "ssim_from_prev": 0.732,
+      "audio_window_start": 874.8,
+      "audio_window_end": 955.4,
+      "audio_duration": 80.6
+    },
+    {
+      "slide_number": 25,
+      "filename": "chemistry_08_hindi_slide_025.png",
+      "timestamp": 959.6,
+      "is_blank": false,
+      "edge_count": 0.516,
+      "ssim_from_prev": 0.726,
+      "audio_window_start": 955.4,
+      "audio_window_end": 959.6,
+      "audio_duration": 4.2
+    },
+    {
+      "slide_number": 26,
+      "filename": "chemistry_08_hindi_slide_026.png",
+      "timestamp": 977.4,
+      "is_blank": false,
+      "edge_count": 0.363,
+      "ssim_from_prev": 0.77,
+      "audio_window_start": 959.6,
+      "audio_window_end": 977.4,
+      "audio_duration": 17.8
+    },
+    {
+      "slide_number": 27,
+      "filename": "chemistry_08_hindi_slide_027.png",
+      "timestamp": 985.8,
+      "is_blank": false,
+      "edge_count": 0.596,
+      "ssim_from_prev": 0.778,
+      "audio_window_start": 977.4,
+      "audio_window_end": 985.8,
+      "audio_duration": 8.4
+    },
+    {
+      "slide_number": 28,
+      "filename": "chemistry_08_hindi_slide_028.png",
+      "timestamp": 1049.0,
+      "is_blank": false,
+      "edge_count": 0.531,
+      "ssim_from_prev": 0.754,
+      "audio_window_start": 985.8,
+      "audio_window_end": 1049.0,
+      "audio_duration": 63.2
+    },
+    {
+      "slide_number": 29,
+      "filename": "chemistry_08_hindi_slide_029.png",
+      "timestamp": 1066.8,
+      "is_blank": false,
+      "edge_count": 0.579,
+      "ssim_from_prev": 0.727,
+      "audio_window_start": 1049.0,
+      "audio_window_end": 1066.8,
+      "audio_duration": 17.8
+    },
+    {
+      "slide_number": 30,
+      "filename": "chemistry_08_hindi_slide_030.png",
+      "timestamp": 1084.4,
+      "is_blank": false,
+      "edge_count": 0.585,
+      "ssim_from_prev": 0.708,
+      "audio_window_start": 1066.8,
+      "audio_window_end": 1084.4,
+      "audio_duration": 17.6
+    }
+  ]
+}

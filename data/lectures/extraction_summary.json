@@ -1,0 +1,103 @@
+{
+  "total_videos": 19,
+  "successful": 19,
+  "failed": 0,
+  "total_slides": 331,
+  "videos": [
+    {
+      "video_id": "algorithms_14_hindi",
+      "status": "success",
+      "slides": 6
+    },
+    {
+      "video_id": "algo_1",
+      "status": "success",
+      "slides": 10
+    },
+    {
+      "video_id": "chemistry_01_english",
+      "status": "success",
+      "slides": 33
+    },
+    {
+      "video_id": "chemistry_04_english",
+      "status": "success",
+      "slides": 31
+    },
+    {
+      "video_id": "chemistry_08_hindi",
+      "status": "success",
+      "slides": 31
+    },
+    {
+      "video_id": "chemistry_09_hindi",
+      "status": "success",
+      "slides": 26
+    },
+    {
+      "video_id": "chemistry_10_english",
+      "status": "success",
+      "slides": 6
+    },
+    {
+      "video_id": "cn_1",
+      "status": "success",
+      "slides": 17
+    },
+    {
+      "video_id": "computer_networks_13_hindi",
+      "status": "success",
+      "slides": 8
+    },
+    {
+      "video_id": "database_11_hindi",
+      "status": "success",
+      "slides": 8
+    },
+    {
+      "video_id": "database_12_hindi",
+      "status": "success",
+      "slides": 5
+    },
+    {
+      "video_id": "database_13_hindi",
+      "status": "success",
+      "slides": 24
+    },
+    {
+      "video_id": "db_1",
+      "status": "success",
+      "slides": 8
+    },
+    {
+      "video_id": "mathematics_03_english",
+      "status": "success",
+      "slides": 32
+    },
+    {
+      "video_id": "mathematics_05_hindi",
+      "status": "success",
+      "slides": 12
+    },
+    {
+      "video_id": "mathematics_07_hindi",
+      "status": "success",
+      "slides": 6
+    },
+    {
+      "video_id": "physics_01_english",
+      "status": "success",
+      "slides": 25
+    },
+    {
+      "video_id": "physics_05_english",
+      "status": "success",
+      "slides": 34
+    },
+    {
+      "video_id": "toc_1",
+      "status": "success",
+      "slides": 9
+    }
+  ]
+}

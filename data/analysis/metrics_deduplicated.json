@@ -1,0 +1,54 @@
+{
+  "total_videos": 4,
+  "total_manual_transitions": 76,
+  "total_predicted_transitions": 76,
+  "true_positives": 75,
+  "false_positives": 1,
+  "false_negatives": 1,
+  "precision": 0.9868421052631579,
+  "recall": 0.9868421052631579,
+  "f1_score": 0.9868421052631579,
+  "tolerance_seconds": 2.0,
+  "per_video": [
+    {
+      "video_id": "chemistry_01_english",
+      "manual_count": 32,
+      "predicted_count": 32,
+      "true_positives": 32,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "video_id": "chemistry_10_english",
+      "manual_count": 5,
+      "predicted_count": 5,
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "video_id": "mathematics_03_english",
+      "manual_count": 31,
+      "predicted_count": 31,
+      "true_positives": 31,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "video_id": "toc_1",
+      "manual_count": 8,
+      "predicted_count": 8,
+      "true_positives": 7,
+      "false_positives": 1,
+      "false_negatives": 1,
+      "precision": 0.875,
+      "recall": 0.875
+    }
+  ]
+}

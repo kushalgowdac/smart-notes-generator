@@ -1,0 +1,132 @@
+{
+  "video_id": "mathematics_05_hindi",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "mathematics_05_hindi_slide_001.png",
+      "timestamp": 29.2,
+      "is_blank": true,
+      "edge_count": 0.082,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 29.2,
+      "audio_duration": 29.2
+    },
+    {
+      "slide_number": 2,
+      "filename": "mathematics_05_hindi_slide_002.png",
+      "timestamp": 55.4,
+      "is_blank": false,
+      "edge_count": 0.776,
+      "ssim_from_prev": 0.354,
+      "audio_window_start": 29.2,
+      "audio_window_end": 55.4,
+      "audio_duration": 26.2
+    },
+    {
+      "slide_number": 3,
+      "filename": "mathematics_05_hindi_slide_003.png",
+      "timestamp": 368.0,
+      "is_blank": true,
+      "edge_count": 0.099,
+      "ssim_from_prev": 0.487,
+      "audio_window_start": 55.4,
+      "audio_window_end": 368.0,
+      "audio_duration": 312.6
+    },
+    {
+      "slide_number": 4,
+      "filename": "mathematics_05_hindi_slide_004.png",
+      "timestamp": 497.4,
+      "is_blank": false,
+      "edge_count": 0.44,
+      "ssim_from_prev": 0.771,
+      "audio_window_start": 368.0,
+      "audio_window_end": 497.4,
+      "audio_duration": 129.4
+    },
+    {
+      "slide_number": 5,
+      "filename": "mathematics_05_hindi_slide_005.png",
+      "timestamp": 668.6,
+      "is_blank": false,
+      "edge_count": 0.191,
+      "ssim_from_prev": 0.5,
+      "audio_window_start": 497.4,
+      "audio_window_end": 668.6,
+      "audio_duration": 171.2
+    },
+    {
+      "slide_number": 6,
+      "filename": "mathematics_05_hindi_slide_006.png",
+      "timestamp": 933.4,
+      "is_blank": false,
+      "edge_count": 0.712,
+      "ssim_from_prev": 0.634,
+      "audio_window_start": 668.6,
+      "audio_window_end": 933.4,
+      "audio_duration": 264.8
+    },
+    {
+      "slide_number": 7,
+      "filename": "mathematics_05_hindi_slide_007.png",
+      "timestamp": 992.6,
+      "is_blank": false,
+      "edge_count": 0.123,
+      "ssim_from_prev": 0.422,
+      "audio_window_start": 933.4,
+      "audio_window_end": 992.6,
+      "audio_duration": 59.2
+    },
+    {
+      "slide_number": 8,
+      "filename": "mathematics_05_hindi_slide_008.png",
+      "timestamp": 1143.8,
+      "is_blank": false,
+      "edge_count": 0.258,
+      "ssim_from_prev": 0.81,
+      "audio_window_start": 992.6,
+      "audio_window_end": 1143.8,
+      "audio_duration": 151.2
+    },
+    {
+      "slide_number": 9,
+      "filename": "mathematics_05_hindi_slide_009.png",
+      "timestamp": 1220.4,
+      "is_blank": false,
+      "edge_count": 0.637,
+      "ssim_from_prev": 0.714,
+      "audio_window_start": 1143.8,
+      "audio_window_end": 1220.4,
+      "audio_duration": 76.6
+    },
+    {
+      "slide_number": 10,
+      "filename": "mathematics_05_hindi_slide_010.png",
+      "timestamp": 1323.8,
+      "is_blank": false,
+      "edge_count": 0.763,
+      "ssim_from_prev": 0.158,
+      "audio_window_start": 1220.4,
+      "audio_window_end": 1323.8,
+      "audio_duration": 103.4
+    },
+    {
+      "slide_number": 11,
+      "filename": "mathematics_05_hindi_slide_011.png",
+      "timestamp": 1327.6,
+      "is_blank": false,
+      "edge_count": 0.432,
+      "ssim_from_prev": 0.237,
+      "audio_window_start": 1323.8,
+      "audio_window_end": 1327.6,
+      "audio_duration": 3.8
+    }
+  ]
+}

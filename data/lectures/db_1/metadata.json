@@ -1,0 +1,88 @@
+{
+  "video_id": "db_1",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "db_1_slide_001.png",
+      "timestamp": 81.6,
+      "is_blank": false,
+      "edge_count": 0.276,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 81.6,
+      "audio_duration": 81.6
+    },
+    {
+      "slide_number": 2,
+      "filename": "db_1_slide_002.png",
+      "timestamp": 134.6,
+      "is_blank": true,
+      "edge_count": 0.03,
+      "ssim_from_prev": 0.783,
+      "audio_window_start": 81.6,
+      "audio_window_end": 134.6,
+      "audio_duration": 53.0
+    },
+    {
+      "slide_number": 3,
+      "filename": "db_1_slide_003.png",
+      "timestamp": 263.4,
+      "is_blank": false,
+      "edge_count": 0.273,
+      "ssim_from_prev": 0.87,
+      "audio_window_start": 134.6,
+      "audio_window_end": 263.4,
+      "audio_duration": 128.8
+    },
+    {
+      "slide_number": 4,
+      "filename": "db_1_slide_004.png",
+      "timestamp": 430.6,
+      "is_blank": false,
+      "edge_count": 0.447,
+      "ssim_from_prev": 0.684,
+      "audio_window_start": 263.4,
+      "audio_window_end": 430.6,
+      "audio_duration": 167.2
+    },
+    {
+      "slide_number": 5,
+      "filename": "db_1_slide_005.png",
+      "timestamp": 477.0,
+      "is_blank": true,
+      "edge_count": 0.065,
+      "ssim_from_prev": 0.717,
+      "audio_window_start": 430.6,
+      "audio_window_end": 477.0,
+      "audio_duration": 46.4
+    },
+    {
+      "slide_number": 6,
+      "filename": "db_1_slide_006.png",
+      "timestamp": 672.4,
+      "is_blank": false,
+      "edge_count": 0.227,
+      "ssim_from_prev": 0.808,
+      "audio_window_start": 477.0,
+      "audio_window_end": 672.4,
+      "audio_duration": 195.4
+    },
+    {
+      "slide_number": 7,
+      "filename": "db_1_slide_007.png",
+      "timestamp": 1147.79,
+      "is_blank": false,
+      "edge_count": 0.466,
+      "ssim_from_prev": 0.627,
+      "audio_window_start": 672.4,
+      "audio_window_end": 1147.79,
+      "audio_duration": 475.4
+    }
+  ]
+}

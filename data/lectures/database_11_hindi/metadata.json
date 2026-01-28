@@ -1,0 +1,88 @@
+{
+  "video_id": "database_11_hindi",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "database_11_hindi_slide_001.png",
+      "timestamp": 67.8,
+      "is_blank": false,
+      "edge_count": 0.492,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 67.8,
+      "audio_duration": 67.8
+    },
+    {
+      "slide_number": 2,
+      "filename": "database_11_hindi_slide_002.png",
+      "timestamp": 72.8,
+      "is_blank": false,
+      "edge_count": 0.12,
+      "ssim_from_prev": 0.388,
+      "audio_window_start": 67.8,
+      "audio_window_end": 72.8,
+      "audio_duration": 5.0
+    },
+    {
+      "slide_number": 3,
+      "filename": "database_11_hindi_slide_003.png",
+      "timestamp": 290.8,
+      "is_blank": true,
+      "edge_count": 0.005,
+      "ssim_from_prev": 0.889,
+      "audio_window_start": 72.8,
+      "audio_window_end": 290.8,
+      "audio_duration": 218.0
+    },
+    {
+      "slide_number": 4,
+      "filename": "database_11_hindi_slide_004.png",
+      "timestamp": 889.6,
+      "is_blank": false,
+      "edge_count": 0.566,
+      "ssim_from_prev": 0.735,
+      "audio_window_start": 290.8,
+      "audio_window_end": 889.6,
+      "audio_duration": 598.8
+    },
+    {
+      "slide_number": 5,
+      "filename": "database_11_hindi_slide_005.png",
+      "timestamp": 893.8,
+      "is_blank": false,
+      "edge_count": 0.322,
+      "ssim_from_prev": 0.597,
+      "audio_window_start": 889.6,
+      "audio_window_end": 893.8,
+      "audio_duration": 4.2
+    },
+    {
+      "slide_number": 6,
+      "filename": "database_11_hindi_slide_006.png",
+      "timestamp": 1118.0,
+      "is_blank": false,
+      "edge_count": 0.343,
+      "ssim_from_prev": 0.77,
+      "audio_window_start": 893.8,
+      "audio_window_end": 1118.0,
+      "audio_duration": 224.2
+    },
+    {
+      "slide_number": 7,
+      "filename": "database_11_hindi_slide_007.png",
+      "timestamp": 1217.8,
+      "is_blank": false,
+      "edge_count": 0.623,
+      "ssim_from_prev": 0.604,
+      "audio_window_start": 1118.0,
+      "audio_window_end": 1217.8,
+      "audio_duration": 99.8
+    }
+  ]
+}

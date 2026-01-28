@@ -1,0 +1,363 @@
+{
+  "video_id": "chemistry_01_english",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "chemistry_01_english_slide_001.png",
+      "timestamp": 26.0,
+      "is_blank": false,
+      "edge_count": 0.286,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 26.0,
+      "audio_duration": 26.0
+    },
+    {
+      "slide_number": 2,
+      "filename": "chemistry_01_english_slide_002.png",
+      "timestamp": 34.4,
+      "is_blank": true,
+      "edge_count": 0.0,
+      "ssim_from_prev": 0.723,
+      "audio_window_start": 26.0,
+      "audio_window_end": 34.4,
+      "audio_duration": 8.4
+    },
+    {
+      "slide_number": 3,
+      "filename": "chemistry_01_english_slide_003.png",
+      "timestamp": 41.4,
+      "is_blank": false,
+      "edge_count": 0.824,
+      "ssim_from_prev": 0.551,
+      "audio_window_start": 34.4,
+      "audio_window_end": 41.4,
+      "audio_duration": 7.0
+    },
+    {
+      "slide_number": 4,
+      "filename": "chemistry_01_english_slide_004.png",
+      "timestamp": 128.8,
+      "is_blank": false,
+      "edge_count": 0.415,
+      "ssim_from_prev": 0.505,
+      "audio_window_start": 41.4,
+      "audio_window_end": 128.8,
+      "audio_duration": 87.4
+    },
+    {
+      "slide_number": 5,
+      "filename": "chemistry_01_english_slide_005.png",
+      "timestamp": 136.8,
+      "is_blank": false,
+      "edge_count": 0.62,
+      "ssim_from_prev": 0.587,
+      "audio_window_start": 128.8,
+      "audio_window_end": 136.8,
+      "audio_duration": 8.0
+    },
+    {
+      "slide_number": 6,
+      "filename": "chemistry_01_english_slide_006.png",
+      "timestamp": 223.6,
+      "is_blank": false,
+      "edge_count": 0.408,
+      "ssim_from_prev": 0.527,
+      "audio_window_start": 136.8,
+      "audio_window_end": 223.6,
+      "audio_duration": 86.8
+    },
+    {
+      "slide_number": 7,
+      "filename": "chemistry_01_english_slide_007.png",
+      "timestamp": 232.8,
+      "is_blank": false,
+      "edge_count": 0.485,
+      "ssim_from_prev": 0.616,
+      "audio_window_start": 223.6,
+      "audio_window_end": 232.8,
+      "audio_duration": 9.2
+    },
+    {
+      "slide_number": 8,
+      "filename": "chemistry_01_english_slide_008.png",
+      "timestamp": 284.2,
+      "is_blank": false,
+      "edge_count": 0.369,
+      "ssim_from_prev": 0.624,
+      "audio_window_start": 232.8,
+      "audio_window_end": 284.2,
+      "audio_duration": 51.4
+    },
+    {
+      "slide_number": 9,
+      "filename": "chemistry_01_english_slide_009.png",
+      "timestamp": 332.6,
+      "is_blank": false,
+      "edge_count": 0.266,
+      "ssim_from_prev": 0.703,
+      "audio_window_start": 284.2,
+      "audio_window_end": 332.6,
+      "audio_duration": 48.4
+    },
+    {
+      "slide_number": 10,
+      "filename": "chemistry_01_english_slide_010.png",
+      "timestamp": 340.6,
+      "is_blank": false,
+      "edge_count": 0.718,
+      "ssim_from_prev": 0.616,
+      "audio_window_start": 332.6,
+      "audio_window_end": 340.6,
+      "audio_duration": 8.0
+    },
+    {
+      "slide_number": 11,
+      "filename": "chemistry_01_english_slide_011.png",
+      "timestamp": 353.2,
+      "is_blank": false,
+      "edge_count": 0.582,
+      "ssim_from_prev": 0.481,
+      "audio_window_start": 340.6,
+      "audio_window_end": 353.2,
+      "audio_duration": 12.6
+    },
+    {
+      "slide_number": 12,
+      "filename": "chemistry_01_english_slide_012.png",
+      "timestamp": 470.2,
+      "is_blank": false,
+      "edge_count": 0.5,
+      "ssim_from_prev": 0.473,
+      "audio_window_start": 353.2,
+      "audio_window_end": 470.2,
+      "audio_duration": 117.0
+    },
+    {
+      "slide_number": 13,
+      "filename": "chemistry_01_english_slide_013.png",
+      "timestamp": 484.2,
+      "is_blank": false,
+      "edge_count": 0.437,
+      "ssim_from_prev": 0.481,
+      "audio_window_start": 470.2,
+      "audio_window_end": 484.2,
+      "audio_duration": 14.0
+    },
+    {
+      "slide_number": 14,
+      "filename": "chemistry_01_english_slide_014.png",
+      "timestamp": 560.6,
+      "is_blank": false,
+      "edge_count": 0.387,
+      "ssim_from_prev": 0.595,
+      "audio_window_start": 484.2,
+      "audio_window_end": 560.6,
+      "audio_duration": 76.4
+    },
+    {
+      "slide_number": 15,
+      "filename": "chemistry_01_english_slide_015.png",
+      "timestamp": 610.2,
+      "is_blank": false,
+      "edge_count": 0.427,
+      "ssim_from_prev": 0.652,
+      "audio_window_start": 560.6,
+      "audio_window_end": 610.2,
+      "audio_duration": 49.6
+    },
+    {
+      "slide_number": 16,
+      "filename": "chemistry_01_english_slide_016.png",
+      "timestamp": 624.6,
+      "is_blank": false,
+      "edge_count": 0.649,
+      "ssim_from_prev": 0.526,
+      "audio_window_start": 610.2,
+      "audio_window_end": 624.6,
+      "audio_duration": 14.4
+    },
+    {
+      "slide_number": 17,
+      "filename": "chemistry_01_english_slide_017.png",
+      "timestamp": 720.6,
+      "is_blank": false,
+      "edge_count": 0.65,
+      "ssim_from_prev": 0.586,
+      "audio_window_start": 624.6,
+      "audio_window_end": 720.6,
+      "audio_duration": 96.0
+    },
+    {
+      "slide_number": 18,
+      "filename": "chemistry_01_english_slide_018.png",
+      "timestamp": 784.4,
+      "is_blank": false,
+      "edge_count": 0.396,
+      "ssim_from_prev": 0.527,
+      "audio_window_start": 720.6,
+      "audio_window_end": 784.4,
+      "audio_duration": 63.8
+    },
+    {
+      "slide_number": 19,
+      "filename": "chemistry_01_english_slide_019.png",
+      "timestamp": 791.4,
+      "is_blank": false,
+      "edge_count": 0.406,
+      "ssim_from_prev": 0.614,
+      "audio_window_start": 784.4,
+      "audio_window_end": 791.4,
+      "audio_duration": 7.0
+    },
+    {
+      "slide_number": 20,
+      "filename": "chemistry_01_english_slide_020.png",
+      "timestamp": 797.4,
+      "is_blank": false,
+      "edge_count": 0.384,
+      "ssim_from_prev": 0.688,
+      "audio_window_start": 791.4,
+      "audio_window_end": 797.4,
+      "audio_duration": 6.0
+    },
+    {
+      "slide_number": 21,
+      "filename": "chemistry_01_english_slide_021.png",
+      "timestamp": 800.8,
+      "is_blank": false,
+      "edge_count": 0.396,
+      "ssim_from_prev": 0.807,
+      "audio_window_start": 797.4,
+      "audio_window_end": 800.8,
+      "audio_duration": 3.4
+    },
+    {
+      "slide_number": 22,
+      "filename": "chemistry_01_english_slide_022.png",
+      "timestamp": 815.4,
+      "is_blank": false,
+      "edge_count": 0.785,
+      "ssim_from_prev": 0.542,
+      "audio_window_start": 800.8,
+      "audio_window_end": 815.4,
+      "audio_duration": 14.6
+    },
+    {
+      "slide_number": 23,
+      "filename": "chemistry_01_english_slide_023.png",
+      "timestamp": 822.6,
+      "is_blank": false,
+      "edge_count": 0.619,
+      "ssim_from_prev": 0.464,
+      "audio_window_start": 815.4,
+      "audio_window_end": 822.6,
+      "audio_duration": 7.2
+    },
+    {
+      "slide_number": 24,
+      "filename": "chemistry_01_english_slide_024.png",
+      "timestamp": 844.0,
+      "is_blank": false,
+      "edge_count": 0.342,
+      "ssim_from_prev": 0.628,
+      "audio_window_start": 822.6,
+      "audio_window_end": 844.0,
+      "audio_duration": 21.4
+    },
+    {
+      "slide_number": 25,
+      "filename": "chemistry_01_english_slide_025.png",
+      "timestamp": 852.0,
+      "is_blank": false,
+      "edge_count": 0.426,
+      "ssim_from_prev": 0.7,
+      "audio_window_start": 844.0,
+      "audio_window_end": 852.0,
+      "audio_duration": 8.0
+    },
+    {
+      "slide_number": 26,
+      "filename": "chemistry_01_english_slide_026.png",
+      "timestamp": 864.6,
+      "is_blank": false,
+      "edge_count": 0.439,
+      "ssim_from_prev": 0.626,
+      "audio_window_start": 852.0,
+      "audio_window_end": 864.6,
+      "audio_duration": 12.6
+    },
+    {
+      "slide_number": 27,
+      "filename": "chemistry_01_english_slide_027.png",
+      "timestamp": 873.8,
+      "is_blank": false,
+      "edge_count": 0.847,
+      "ssim_from_prev": 0.451,
+      "audio_window_start": 864.6,
+      "audio_window_end": 873.8,
+      "audio_duration": 9.2
+    },
+    {
+      "slide_number": 28,
+      "filename": "chemistry_01_english_slide_028.png",
+      "timestamp": 928.4,
+      "is_blank": false,
+      "edge_count": 0.275,
+      "ssim_from_prev": 0.515,
+      "audio_window_start": 873.8,
+      "audio_window_end": 928.4,
+      "audio_duration": 54.6
+    },
+    {
+      "slide_number": 29,
+      "filename": "chemistry_01_english_slide_029.png",
+      "timestamp": 961.0,
+      "is_blank": false,
+      "edge_count": 0.466,
+      "ssim_from_prev": 0.642,
+      "audio_window_start": 928.4,
+      "audio_window_end": 961.0,
+      "audio_duration": 32.6
+    },
+    {
+      "slide_number": 30,
+      "filename": "chemistry_01_english_slide_030.png",
+      "timestamp": 1055.6,
+      "is_blank": false,
+      "edge_count": 0.13,
+      "ssim_from_prev": 0.675,
+      "audio_window_start": 961.0,
+      "audio_window_end": 1055.6,
+      "audio_duration": 94.6
+    },
+    {
+      "slide_number": 31,
+      "filename": "chemistry_01_english_slide_031.png",
+      "timestamp": 1065.6,
+      "is_blank": false,
+      "edge_count": 0.524,
+      "ssim_from_prev": 0.623,
+      "audio_window_start": 1055.6,
+      "audio_window_end": 1065.6,
+      "audio_duration": 10.0
+    },
+    {
+      "slide_number": 32,
+      "filename": "chemistry_01_english_slide_032.png",
+      "timestamp": 1109.8,
+      "is_blank": false,
+      "edge_count": 0.526,
+      "ssim_from_prev": 0.525,
+      "audio_window_start": 1065.6,
+      "audio_window_end": 1109.8,
+      "audio_duration": 44.2
+    }
+  ]
+}

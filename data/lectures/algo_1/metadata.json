@@ -1,0 +1,110 @@
+{
+  "video_id": "algo_1",
+  "extraction_method": "ssim_deduplication",
+  "extraction_params": {
+    "ssim_dedup_threshold": 0.92,
+    "ssim_rapid_threshold": 0.85,
+    "blank_edge_threshold": 0.1
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "filename": "algo_1_slide_001.png",
+      "timestamp": 101.6,
+      "is_blank": false,
+      "edge_count": 0.741,
+      "ssim_from_prev": 0.0,
+      "audio_window_start": 0.0,
+      "audio_window_end": 101.6,
+      "audio_duration": 101.6
+    },
+    {
+      "slide_number": 2,
+      "filename": "algo_1_slide_002.png",
+      "timestamp": 151.8,
+      "is_blank": false,
+      "edge_count": 0.76,
+      "ssim_from_prev": 0.594,
+      "audio_window_start": 101.6,
+      "audio_window_end": 151.8,
+      "audio_duration": 50.2
+    },
+    {
+      "slide_number": 3,
+      "filename": "algo_1_slide_003.png",
+      "timestamp": 158.6,
+      "is_blank": false,
+      "edge_count": 0.366,
+      "ssim_from_prev": 0.666,
+      "audio_window_start": 151.8,
+      "audio_window_end": 158.6,
+      "audio_duration": 6.8
+    },
+    {
+      "slide_number": 4,
+      "filename": "algo_1_slide_004.png",
+      "timestamp": 278.2,
+      "is_blank": false,
+      "edge_count": 0.433,
+      "ssim_from_prev": 0.836,
+      "audio_window_start": 158.6,
+      "audio_window_end": 278.2,
+      "audio_duration": 119.6
+    },
+    {
+      "slide_number": 5,
+      "filename": "algo_1_slide_005.png",
+      "timestamp": 330.0,
+      "is_blank": false,
+      "edge_count": 0.787,
+      "ssim_from_prev": 0.638,
+      "audio_window_start": 278.2,
+      "audio_window_end": 330.0,
+      "audio_duration": 51.8
+    },
+    {
+      "slide_number": 6,
+      "filename": "algo_1_slide_006.png",
+      "timestamp": 372.0,
+      "is_blank": false,
+      "edge_count": 0.238,
+      "ssim_from_prev": 0.592,
+      "audio_window_start": 330.0,
+      "audio_window_end": 372.0,
+      "audio_duration": 42.0
+    },
+    {
+      "slide_number": 7,
+      "filename": "algo_1_slide_007.png",
+      "timestamp": 1010.79,
+      "is_blank": false,
+      "edge_count": 0.714,
+      "ssim_from_prev": 0.654,
+      "audio_window_start": 372.0,
+      "audio_window_end": 1010.79,
+      "audio_duration": 638.79
+    },
+    {
+      "slide_number": 8,
+      "filename": "algo_1_slide_008.png",
+      "timestamp": 1044.39,
+      "is_blank": false,
+      "edge_count": 0.752,
+      "ssim_from_prev": 0.59,
+      "audio_window_start": 1010.79,
+      "audio_window_end": 1044.39,
+      "audio_duration": 33.6
+    },
+    {
+      "slide_number": 9,
+      "filename": "algo_1_slide_009.png",
+      "timestamp": 1087.99,
+      "is_blank": false,
+      "edge_count": 0.862,
+      "ssim_from_prev": 0.724,
+      "audio_window_start": 1044.39,
+      "audio_window_end": 1087.99,
+      "audio_duration": 43.6
+    }
+  ]
+}
