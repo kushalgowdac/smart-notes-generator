@@ -51,52 +51,193 @@ echo "GEMINI_API_KEY=your_api_key_here" > .env
 
 ### Usage
 
-#### Process New Lecture Video
+## 🎯 Core Scripts (Start Here)
 
+### 1. Process New Lecture Video (Main Pipeline)
 ```bash
-# Full pipeline (slides + notes)
+# Full pipeline: slides extraction + notes generation
 python src/process_new_lecture.py data/videos/my_lecture.mp4
 
-# Slides only (skip notes generation)
+# Slides only (skip notes generation to save API quota)
 python src/process_new_lecture.py data/videos/my_lecture.mp4 --skip-notes
 ```
 
-#### Generate Notes from Existing Slides
+**What it does:**
+- Extracts features at 5 FPS
+- Predicts transitions using XGBoost model
+- Deduplicates with SSIM
+- Extracts best quality frames at 30 FPS
+- Organizes output in `data/lectures/<video_id>/`
 
+---
+
+### 2. Generate Notes from Existing Slides
 ```bash
 python src/production_note_maker.py data/lectures/my_lecture
 ```
 
-#### Re-optimize Deduplication
+**What it does:**
+- OCR text extraction from slides (PaddleOCR)
+- Audio transcription (Whisper)
+- AI note generation (Gemini 2.5 Flash)
+- Smart caching for instant re-runs
+- Outputs: `notes.md` with structured content
 
+**API Quota:** Free tier = 20 requests/day
+
+---
+
+### 3. Convenience Wrapper (Optional)
 ```bash
-# Adjust SSIM threshold without reprocessing video
-python rerun_deduplication.py data/lectures/my_lecture --ssim 0.85
+# Windows
+.\process_complete.bat data\videos\my_lecture.mp4
+
+# Linux/Mac
+./process_complete.sh data/videos/my_lecture.mp4
 ```
+
+Runs both slides extraction + notes generation automatically.
+
+---
+
+## 🔧 Utility Scripts (Advanced Use)
+
+### Re-optimize Deduplication (Zero Video Processing)
+```bash
+# Adjust SSIM threshold without reprocessing video (3s vs 40min!)
+python rerun_deduplication.py data/lectures/my_lecture --ssim 0.85
+
+# Try different thresholds
+python rerun_deduplication.py data/lectures/my_lecture --ssim 0.80  # Stricter
+python rerun_deduplication.py data/lectures/my_lecture --ssim 0.92  # Moderate
+```
+
+**When to use:**
+- Too many duplicate slides detected
+- Incremental board writing videos (use 0.80-0.85)
+- Want to optimize without waiting 40 minutes
+
+**Output:** `transitions_reprocessed_ssim0.85.json` (doesn't overwrite original)
+
+---
+
+## 🧪 Analysis Scripts (For Development)
+
+### Compare Deduplication Approaches
+```bash
+python compare_deduplication.py
+```
+Compares clustering-only vs SSIM deduplication across all videos.
+
+### Extract with Clustering Only
+```bash
+python extract_with_clustering_only.py
+```
+Tests clustering layer without SSIM (for algorithm analysis).
+
+### Visualize Transitions
+```bash
+python src/visualize_transitions.py data/lectures/my_lecture
+```
+Generates HTML preview of detected transitions.
+
+---
+
+## 📚 Training Scripts (For Model Development)
+
+### Train New XGBoost Model
+```bash
+python src/train_xgboost_model.py
+```
+Requires: `data/master_dataset.csv` with labeled transitions.
+
+### Merge & Split Dataset
+```bash
+python src/merge_and_split_dataset.py
+```
+Combines individual video CSVs into train/test split.
+
+---
+
+## 🗂️ Data Organization Scripts
+
+### Organize Lecture Folders
+```bash
+python src/organize_lecture_folders.py
+```
+Restructures old outputs into new folder format.
+
+### Reprocess All Videos
+```bash
+# Windows
+.\reprocess_all.bat
+
+# PowerShell
+.\reprocess_all.ps1
+```
+Batch processing for all videos in `data/videos/`.
+
+---
+
+## ⚙️ Installation Helpers
+
+### Install Notes Dependencies Only
+```bash
+# If you only need notes generation (not CV pipeline)
+.\install_notes_deps.ps1
+```
+
+Installs: PaddleOCR, Whisper, Gemini SDK (skips CV libraries).
 
 ## 📂 Project Structure
 
 ```
 smart-notes-generator/
-├── src/
-│   ├── process_new_lecture.py       # Main CV pipeline
-│   ├── production_note_maker.py     # Notes generation
-│   ├── video_feature_extractor.py   # Feature extraction (5 FPS)
-│   ├── train_xgboost_model.py       # Model training
-│   └── ...
-├── data/
-│   ├── videos/                      # Input videos
-│   ├── lectures/                    # Per-video outputs
-│   │   └── <video_id>/
-│   │       ├── slides/              # Extracted slides
-│   │       ├── audio/               # Audio segments
-│   │       ├── transitions.json     # Metadata
-│   │       └── notes.md             # Generated notes
-│   └── ...
-├── models/                          # Trained XGBoost model
-├── rerun_deduplication.py           # Instant re-optimization tool
-├── requirements.txt                 # Python dependencies
-└── README.md                        # This file
+├── 🎯 CORE SCRIPTS
+│   ├── src/process_new_lecture.py       # [START HERE] Main pipeline
+│   ├── src/production_note_maker.py     # Notes generation
+│   └── run_production_notes.py          # Alias for production_note_maker.py
+│
+├── 🔧 UTILITIES
+│   ├── rerun_deduplication.py           # Instant SSIM re-optimization
+│   ├── process_complete.bat/.sh         # Convenience wrappers
+│   └── install_notes_deps.ps1           # Minimal dependency install
+│
+├── 🧪 ANALYSIS & DEVELOPMENT
+│   ├── compare_deduplication.py         # Algorithm comparison
+│   ├── extract_with_clustering_only.py  # Clustering analysis
+│   ├── src/visualize_transitions.py     # HTML preview generator
+│   ├── src/train_xgboost_model.py       # Model training
+│   ├── src/merge_and_split_dataset.py   # Dataset preparation
+│   └── src/compare_transitions.py       # Ground truth comparison
+│
+├── 📊 DATA STRUCTURE
+│   ├── data/
+│   │   ├── videos/                      # [PUT VIDEOS HERE]
+│   │   ├── lectures/<video_id>/         # Output per video
+│   │   │   ├── slides/*.png             # Extracted slides
+│   │   │   ├── audio/*.wav              # Audio segments (optional)
+│   │   │   ├── transitions.json         # Metadata + timestamps
+│   │   │   ├── ocr_cache.json           # OCR cache (auto-generated)
+│   │   │   ├── transcript_cache.json    # Whisper cache (auto-generated)
+│   │   │   └── notes.md                 # Final notes
+│   │   ├── master_dataset.csv           # Training data (all videos)
+│   │   └── train_dataset.csv / test_dataset.csv
+│   └── models/
+│       └── xgboost_transition_classifier_*.json  # Trained model
+│
+├── 📖 DOCUMENTATION
+│   ├── README.md                        # This file
+│   ├── setup_github.md                  # Git workflow guide
+│   ├── PROJECT_HISTORY_MASTER.md        # Complete development history
+│   ├── COMPARISON_GUIDE.md              # Algorithm analysis
+│   └── docs/README.md                   # Additional docs
+│
+└── ⚙️ CONFIGURATION
+    ├── requirements.txt                 # Python dependencies
+    ├── .gitignore                       # Git exclusions
+    ├── .env.example                     # Environment template
+    └── LICENSE                          # MIT License
 ```
 
 ## 🔧 Configuration
