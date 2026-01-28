@@ -121,6 +121,76 @@ python rerun_deduplication.py data/lectures/my_lecture --ssim 0.92  # Moderate
 
 ---
 
+### Generate HTML Preview (Verify Slides Before Notes)
+```bash
+python src/generate_final_preview.py data/lectures/my_lecture
+```
+
+**What it does:**
+- Creates HTML gallery with all detected slides
+- Shows timestamps and SSIM scores
+- Helps verify quality before spending API quota on notes
+- Output: `data/final_slides/<video>_final_slides.html`
+
+---
+
+### Quick Notes Generation (Shortcuts)
+```bash
+# Windows
+.\generate_notes.bat my_lecture
+
+# Linux/Mac
+./generate_notes.sh my_lecture
+```
+
+Shortcut for `python src/production_note_maker.py data/lectures/my_lecture`
+
+---
+
+### Test OCR Installation
+```bash
+python test_paddle.py
+```
+
+**When to use:**
+- After installing dependencies
+- Troubleshooting PaddleOCR issues
+- Verifying CPU/GPU detection
+
+---
+
+### Batch Process Multiple Videos
+```bash
+# Windows
+.\reprocess_all.bat
+
+# PowerShell (with progress tracking)
+.\reprocess_all.ps1
+```
+
+Processes all videos in `data/videos/` automatically.
+
+---
+
+### Manual Labeling (Create Training Data)
+```bash
+python src/label_transitions.py
+```
+
+**When to use:**
+- Creating ground truth for model training
+- Have manual transition timestamps in `data/ground_truth/<video>/transitions.txt`
+- Want to improve model accuracy on your specific video type
+
+**Input format (transitions.txt):**
+```
+84.4
+405.39
+504.39
+```
+
+---
+
 ## 🧪 Analysis Scripts (For Development)
 
 ### Compare Deduplication Approaches
@@ -201,7 +271,11 @@ smart-notes-generator/
 ├── 🔧 UTILITIES
 │   ├── rerun_deduplication.py           # Instant SSIM re-optimization
 │   ├── process_complete.bat/.sh         # Convenience wrappers
-│   └── install_notes_deps.ps1           # Minimal dependency install
+│   ├── generate_notes.bat/.sh           # Quick notes generation
+│   ├── test_paddle.py                   # Verify OCR installation
+│   ├── reprocess_all.bat/.ps1           # Batch process all videos
+│   ├── install_notes_deps.ps1           # Minimal dependency install
+│   └── src/generate_final_preview.py    # HTML preview generator
 │
 ├── 🧪 ANALYSIS & DEVELOPMENT
 │   ├── compare_deduplication.py         # Algorithm comparison
