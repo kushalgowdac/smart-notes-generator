@@ -6,6 +6,11 @@ Uses: Free Google Gemini API + PaddleOCR + Faster-Whisper
 Author: Smart Notes Generator Team
 """
 
+
+# Add at the top of src/generate_lecture_notes.py
+from dotenv import load_dotenv
+load_dotenv()  # Load .env file
+
 import os
 import json
 import cv2
@@ -30,10 +35,10 @@ logger = logging.getLogger(__name__)
 class Config:
     """Configuration settings for notes generation"""
     # API Keys (set as environment variable or paste here)
-    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', '')
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', 'YOUR_API_KEY_HERE')
     
     # Model settings
-    GEMINI_MODEL = 'gemini-2.5-flash'  # January 2026 free tier (250 req/day)
+    GEMINI_MODEL = 'gemini-2.5-flash'  # January 2026 stable model (best price-performance)
     WHISPER_MODEL = 'tiny'  # tiny/base/small/medium/large - tiny for testing
     
     # Language settings
@@ -326,12 +331,14 @@ class FreeGeminiLLM:
         
         genai.configure(api_key=api_key)
         
-        # Try different model names to find one that works (Jan 2026 free tier models)
+        # Try different model names to find one that works (Jan 2026 models)
+        # Updated: Using currently available stable models as of Jan 2026
         models_to_try = [
-            Config.GEMINI_MODEL,
-            'gemini-2.5-flash',      # 250 req/day - best for notes
-            'gemini-2.5-flash-lite', # 1000 req/day - faster, lighter
-            'gemini-1.5-pro'         # Legacy free tier
+            'gemini-2.5-flash',          # Stable: Best price-performance (June 2025)
+            'gemini-2.5-flash-lite',     # Stable: Fastest, cost-efficient (July 2025)
+            'gemini-2.5-pro',            # Stable: Advanced thinking model (June 2025)
+            'gemini-3-flash-preview',    # Preview: Latest balanced model (Dec 2025)
+            'gemini-3-pro-preview'       # Preview: Most intelligent model (Nov 2025)
         ]
         
         self.model = None
@@ -545,7 +552,7 @@ class NotesGenerator:
         return None
     
     def process(self):
-        """Main processing pipeline"""
+        """Main processing pipeline with checkpoint/resume support"""
         
         logger.info("="*70)
         logger.info("LECTURE NOTES GENERATION SYSTEM")
@@ -554,16 +561,17 @@ class NotesGenerator:
         # Define checkpoint files
         ocr_cache = self.lecture_folder / 'ocr_cache.json'
         transcript_cache = self.lecture_folder / 'transcript_cache.json'
+        notes_checkpoint = self.lecture_folder / 'notes.md'
         
         # Step 1: OCR from slides
         logger.info("\n[STEP 1/5] OCR Extraction")
         logger.info("-" * 70)
         
         if ocr_cache.exists():
-            logger.info("Loading OCR results from cache...")
+            logger.info("✅ Loading OCR results from cache...")
             with open(ocr_cache, 'r', encoding='utf-8') as f:
                 ocr_results = json.load(f)
-            logger.info(f"✓ Loaded {len(ocr_results)} cached OCR results")
+            logger.info(f"✅ Loaded {len(ocr_results)} cached OCR results")
         else:
             ocr_results = self.ocr.process_slides_folder(self.slides_dir)
             
@@ -574,18 +582,18 @@ class NotesGenerator:
             # Save OCR cache
             with open(ocr_cache, 'w', encoding='utf-8') as f:
                 json.dump(ocr_results, f, indent=2, ensure_ascii=False)
-            logger.info(f"✓ Saved OCR results to cache")
+            logger.info(f"✅ Saved OCR results to cache")
         
         # Step 2: Audio transcription
         logger.info("\n[STEP 2/5] Audio Transcription")
         logger.info("-" * 70)
         
         if transcript_cache.exists():
-            logger.info("Loading transcript from cache...")
+            logger.info("✅ Loading transcript from cache...")
             with open(transcript_cache, 'r', encoding='utf-8') as f:
                 transcript = json.load(f)
             detected_language = transcript.get('language', 'unknown')
-            logger.info(f"✓ Loaded cached transcript (language: {detected_language})")
+            logger.info(f"✅ Loaded cached transcript (language: {detected_language})")
         else:
             audio_file = self.find_audio_file()
             
@@ -600,7 +608,7 @@ class NotesGenerator:
                 # Save transcript cache
                 with open(transcript_cache, 'w', encoding='utf-8') as f:
                     json.dump(transcript, f, indent=2, ensure_ascii=False)
-                logger.info(f"✓ Saved transcript to cache")
+                logger.info(f"✅ Saved transcript to cache")
             else:
                 logger.warning("No audio file found, proceeding without transcription")
                 transcript = {'segments': [], 'language': 'unknown', 'full_text': ''}
@@ -630,14 +638,52 @@ class NotesGenerator:
                     'segments': []
                 })
         
-        # Step 4: Clean OCR and generate notes
+        # Step 4: Clean OCR and generate notes (with resume support)
         logger.info("\n[STEP 4/5] Generating Notes with LLM")
         logger.info("-" * 70)
+        
+        # Check for existing progress
+        last_completed_slide = 0
+        if notes_checkpoint.exists():
+            logger.info("🔄 Found existing notes.md - checking progress...")
+            try:
+                with open(notes_checkpoint, 'r', encoding='utf-8') as f:
+                    existing_content = f.read()
+                    # Find last completed slide by searching for slide markers
+                    import re
+                    slide_matches = re.findall(r'### Slide (\d+)', existing_content)
+                    if slide_matches:
+                        last_completed_slide = max([int(s) for s in slide_matches])
+                        logger.info(f"✅ Last completed: Slide {last_completed_slide}/{len(ocr_results)}")
+                        logger.info(f"🔄 Resuming from Slide {last_completed_slide + 1}")
+            except Exception as e:
+                logger.warning(f"Could not parse existing notes: {e}")
+                last_completed_slide = 0
         
         all_slide_data = []
         
         for i, (ocr_res, trans_res) in enumerate(zip(ocr_results, aligned_transcript)):
-            logger.info(f"Processing Slide {i+1}/{len(ocr_results)}...")
+            slide_num = i + 1
+            
+            # Skip already completed slides
+            if slide_num <= last_completed_slide:
+                logger.info(f"⏭️ Skipping Slide {slide_num} (already completed)")
+                # Load existing data if available
+                all_slide_data.append({
+                    'slide_number': slide_num,
+                    'image_path': ocr_res['image_path'],
+                    'image_name': ocr_res['image_name'],
+                    'raw_ocr': ocr_res['ocr_text'],
+                    'cleaned_ocr': '',
+                    'transcript': trans_res['transcript'],
+                    'start_time': trans_res['start_time'],
+                    'end_time': trans_res['end_time'],
+                    'duration': trans_res['duration'],
+                    'notes': ''  # Will be loaded from existing file
+                })
+                continue
+            
+            logger.info(f"Processing Slide {slide_num}/{len(ocr_results)}...")
             
             # Clean OCR
             cleaned_ocr = self.llm.clean_ocr(
@@ -648,7 +694,7 @@ class NotesGenerator:
             
             # Generate notes
             slide_data = {
-                'slide_number': i + 1,
+                'slide_number': slide_num,
                 'image_path': ocr_res['image_path'],
                 'image_name': ocr_res['image_name'],
                 'raw_ocr': ocr_res['ocr_text'],
@@ -664,6 +710,10 @@ class NotesGenerator:
             
             all_slide_data.append(slide_data)
             
+            # Incremental save - append to notes.md after each slide
+            self._append_slide_to_markdown(slide_data, notes_checkpoint, is_first=(slide_num == 1))
+            logger.info(f"💾 Saved progress: Slide {slide_num}")
+            
             # Rate limiting for free tier
             time.sleep(Config.RATE_LIMIT_DELAY)
         
@@ -672,7 +722,7 @@ class NotesGenerator:
         logger.info("-" * 70)
         
         # Combine all notes
-        all_notes_text = '\n\n'.join([s['notes'] for s in all_slide_data])
+        all_notes_text = '\n\n'.join([s['notes'] for s in all_slide_data if s['notes']])
         
         # Generate summary
         summary = self.llm.generate_summary(all_notes_text)
@@ -688,6 +738,27 @@ class NotesGenerator:
         logger.info("="*70)
         
         return output
+    
+    def _append_slide_to_markdown(self, slide_data, notes_path, is_first=False):
+        """Incrementally append slide to notes.md for checkpoint/resume"""
+        mode = 'w' if is_first else 'a'
+        
+        with open(notes_path, mode, encoding='utf-8') as f:
+            if is_first:
+                # Write header only for first slide
+                lecture_title = self.metadata.get('title', self.lecture_folder.name.replace('_', ' ').title())
+                f.write(f"# {lecture_title}\n\n")
+                f.write(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
+                f.write(f"**Status:** In Progress (Checkpoint Resume Enabled)\n\n")
+                f.write("---\n\n")
+            
+            # Write slide content
+            rel_path = Path(slide_data['image_path']).relative_to(self.lecture_folder)
+            f.write(f"### Slide {slide_data['slide_number']}\n")
+            f.write(f"**Time:** {slide_data['start_time']:.1f}s - {slide_data['end_time']:.1f}s\n\n")
+            f.write(f"![Slide {slide_data['slide_number']}]({rel_path})\n\n")
+            f.write(slide_data['notes'])
+            f.write("\n\n---\n\n")
     
     def create_markdown_output(self, slides_data, summary, detected_language):
         """Create formatted Markdown document"""
