@@ -1,13 +1,892 @@
 # Smart Notes Generator - Project History & Master File
 **Project Location:** `D:\College_Life\projects\smart notes generator - trail 3`  
 **Created:** January 25, 2026  
-**Last Updated:** January 29, 2026 - Version 3.0 (Multimodal Notes Generation & Re-deduplication Tool)
+**Last Updated:** January 29, 2026 - Version 3.1 (Utility Scripts, Checkpoint System & SSIM Testing)
 
 ---
 
-## 📋 Recent Updates - Version 3.0
+## 📋 Recent Updates - Version 3.1
+
+### January 29, 2026 - Production Utilities & Optimization Framework v3.1
+**Major Features Added:**
+
+1. **Checkpoint & Resume System (Zero Data Loss)**
+   - Implemented automatic checkpoint saving in `process_new_lecture.py`
+   - 5 checkpoint steps: audio → features → deduplication → slides → readme
+   - Saves `.checkpoint.json` after each completed step
+   - Resume detection: Re-run same command to continue from interruption
+   - Handles Ctrl+C interruptions, Python errors, and system crashes gracefully
+   - Incremental slide-by-slide saving in `generate_lecture_notes.py`
+   - Resume from last completed slide when API quota exceeded
+   - **Time savings:** Skip 12-minute feature extraction on resume (from 24% → instant)
+
+2. **SSIM Threshold Testing Framework**
+   - Created `test_ssim_batch.bat` - One-click automated testing
+   - Created `check_accuracy.py` - Ground truth comparison tool
+   - Created `src/test_ssim_thresholds.py` - Comprehensive Python framework
+   - Tests multiple SSIM thresholds (0.75-0.97) against 18 training videos
+   - Calculates Precision, Recall, F1-score for each threshold
+   - Automatically identifies optimal threshold
+   - **Speed:** 3 seconds per threshold (reuses existing slides)
+   - **Result:** SSIM 0.85 optimal for incremental writing (F1=86.59%)
+
+3. **Intelligent Video Analysis Utilities**
+   - **analyze_video_type.py** - SSIM threshold recommender
+     * Classifies videos: INCREMENTAL_WRITING / MIXED / DISCRETE_SLIDES
+     * Analyzes SSIM distribution statistics (mean, std, quartiles)
+     * Predicts slide reduction at different thresholds
+     * Recommends optimal SSIM (0.80-0.85 for incremental, 0.92-0.95 for discrete)
+     * Optional matplotlib visualization (histogram + sequential plot)
+   
+   - **check_slide_quality.py** - Pre-generation quality gate
+     * Sharpness detection via Laplacian variance (threshold >100)
+     * Teacher occlusion detection via HSV skin masking (threshold <15%)
+     * Brightness quality check (50-220 range)
+     * Contrast analysis (>30 threshold)
+     * Classifies slides: EXCELLENT / GOOD / ACCEPTABLE / POOR
+     * Outputs quality_report.json with detailed metrics
+     * Visual problem slide viewer for manual review
+   
+   - **check_ocr_confidence.py** - OCR quality analyzer
+     * Analyzes ocr_cache.json for confidence scores
+     * Block-level confidence tracking (min/max/avg)
+     * Identifies EMPTY vs LOW_CONFIDENCE slides
+     * Generates ocr_confidence_report.json
+     * Visual problem slide viewer
+
+4. **API Quota & Recovery Utilities**
+   - **resume_notes.py** - Checkpoint recovery for notes generation
+     * Detects last completed slide by parsing notes.md (regex-based)
+     * Validates slide completion (>50 chars content check)
+     * Estimates API calls remaining vs quota (20/day Gemini free tier)
+     * Dry-run mode for planning multi-day processing
+     * **Use case:** 50-slide lecture = 3 days with free tier
+   
+   - **curate_slides.py** - Interactive manual curator
+     * OpenCV-based visual interface with keyboard controls
+     * Controls: Y(keep) / N(skip) / U(undo) / ←→(navigate) / R(reset) / S(save) / Q(quit)
+     * Auto-remove duplicates function (SSIM>0.90 batch removal)
+     * Semi-transparent info overlay with current status
+     * Backs up original transitions.json before saving
+     * **Speed:** Review 20 slides in ~2 minutes
+
+5. **Export & Distribution Utilities**
+   - **export_notes.py** - Multi-format exporter
+     * PDF export via WeasyPrint (CSS styling, cover page, table of contents)
+     * DOCX export via python-docx (formatting, headings, images)
+     * Anki flashcard generation via genanki (auto-creates from headings)
+     * Notion export (Markdown with metadata header)
+     * All dependencies optional (graceful fallback)
+     * Command: `--format pdf` / `--format docx` / `--format anki` / `--format notion`
+
+6. **Documentation & Guides**
+   - Created `docs/CHECKPOINT_RESUME_GUIDE.md` - Complete checkpoint system guide
+   - Created `docs/SSIM_TESTING_GUIDE.md` - SSIM optimization workflow
+   - Created `SSIM_QUICK_START.md` - Quick reference for threshold testing
+   - Updated README.md with checkpoint features and SSIM testing
+   - All utilities documented with usage examples and rationale
+
+**Files Created:**
+- `src/analyze_video_type.py` - 350+ lines, SSIM recommender
+- `src/resume_notes.py` - 200+ lines, API quota recovery
+- `src/check_slide_quality.py` - 300+ lines, quality gate
+- `src/curate_slides.py` - 400+ lines, interactive curator
+- `src/export_notes.py` - 500+ lines, multi-format exporter
+- `src/check_ocr_confidence.py` - 200+ lines, OCR analyzer
+- `src/test_ssim_thresholds.py` - 350+ lines, SSIM testing framework
+- `src/quick_ssim_test.py` - 100+ lines, quick SSIM analysis
+- `check_accuracy.py` - Ground truth comparison tool
+- `test_ssim_batch.bat` - Automated SSIM testing batch script
+- `docs/CHECKPOINT_RESUME_GUIDE.md` - Comprehensive checkpoint guide
+- `docs/SSIM_TESTING_GUIDE.md` - SSIM optimization guide
+- `SSIM_QUICK_START.md` - Quick reference guide
+
+**Testing Results:**
+- Checkpoint system tested: 24% feature extraction → resume → skip to deduplication
+- SSIM testing: Validated optimal threshold (0.85) on 18 training videos
+- Quality gate: Detected blur, occlusion, brightness issues in test slides
+- Resume notes: Successfully parsed notes.md, estimated 3-day timeline for 50 slides
+- Export: Generated PDF with CSS styling, DOCX with formatting, Anki flashcards
+
+**Performance Metrics:**
+- Checkpoint resume: **0 seconds** (instant skip for completed steps)
+- SSIM testing: **3 seconds per threshold** (vs 40 minutes full reprocess)
+- Quality analysis: **~2 seconds per slide** (Laplacian + HSV analysis)
+- Interactive curation: **~6 seconds per slide** (manual review)
+- Notes resumption: **Saves 10-20 minutes** (skips OCR + transcription re-run)
+
+**Integration Benefits:**
+- All utilities work with checkpoint system (no conflicts)
+- SSIM testing uses rerun_deduplication.py (instant results)
+- Quality gate can pre-filter before notes generation (saves API quota)
+- Resume notes enables multi-day processing for free tier users
+- Export utilities create distribution-ready outputs
+
+7. **Systematic Testing Framework (January 29, 2026)**
+   - **check_baseline_accuracy.py** - Ground truth validation tool
+     * Compares current transitions.json against ground_truth/*.txt
+     * Tests all 18 training videos with ±2.0s tolerance
+     * Calculates Precision, Recall, F1-score per video
+     * Provides optimization recommendations based on F1-score
+     * Outputs: data/analysis/baseline_accuracy.txt
+   
+   - **test_utilities.py** - Automated test orchestrator
+     * 5 priority levels: MUST DO → SHOULD DO → OPTIONAL
+     * Priority 1: Baseline accuracy check (30s)
+     * Priority 2: SSIM optimization (5-10min)
+     * Priority 3: Video type analysis (10-15s/video)
+     * Priority 4: Slide quality check (1-2min/video)
+     * Priority 5: OCR confidence + Resume detection
+     * Saves results to data/analysis/utility_tests/
+   
+   - **run_all_tests.ps1** - Interactive PowerShell test suite
+     * User-friendly prompts for each testing phase
+     * Colored output with progress indicators
+     * Optional step skipping
+     * Comprehensive summary at end
+     * Estimated time: 1-2 hours for full suite
+   
+   - **docs/UTILITY_TESTING_GUIDE.md** - Complete testing workflow
+     * Priority-based testing order
+     * Command examples for each utility
+     * Output interpretation guidelines
+     * Parameter tuning recommendations
+     * Troubleshooting section
+
+**Testing Workflow:**
+```
+Priority 1: Baseline Accuracy → Identify if optimization needed
+Priority 2: SSIM Optimization → Find optimal threshold (if F1 < 85%)
+Priority 3: Video Type Analysis → Per-video threshold recommendations
+Priority 4: Quality Assessment → Detect poor slides for re-extraction
+Priority 5: OCR + Resume → Verify text extraction & checkpoints
+```
+
+**Files Added:**
+- `check_baseline_accuracy.py` - 200+ lines, ground truth comparison
+- `test_utilities.py` - 300+ lines, automated test orchestrator
+- `run_all_tests.ps1` - 250+ lines, interactive PowerShell script
+- `docs/UTILITY_TESTING_GUIDE.md` - 500+ lines, comprehensive guide
+
+**How to Use:**
+```bash
+# Quick baseline check
+python check_baseline_accuracy.py
+
+# Full automated testing
+.\run_all_tests.ps1
+
+# Individual priority test
+python test_utilities.py --priority 1
+```
+
+**Expected Results:**
+- F1 ≥ 85%: Excellent - No changes needed
+- F1 75-85%: Good - Minor tuning beneficial
+- F1 60-75%: Fair - SSIM optimization recommended
+- F1 < 60%: Poor - Urgent parameter tuning required
+
+---
+
+## � CLI Command Reference - All Scripts
+
+### Core Pipeline Scripts
+
+#### 1. process_new_lecture.py - Main Processing Pipeline
+**Purpose:** End-to-end video processing with checkpoint system
+
+```bash
+# Basic usage
+python src/process_new_lecture.py data/videos/lecture.mp4
+
+# With custom SSIM threshold
+python src/process_new_lecture.py data/videos/lecture.mp4 --ssim 0.85
+
+# With custom model and threshold
+python src/process_new_lecture.py data/videos/lecture.mp4 \
+  --model models/my_model.pkl \
+  --threshold 0.05 \
+  --ssim 0.90
+
+# Full parameter customization
+python src/process_new_lecture.py data/videos/lecture.mp4 \
+  --output-dir data/lectures \
+  --model models/xgboost_model_20260126_160645.pkl \
+  --threshold 0.01 \
+  --ssim 0.95 \
+  --blank-threshold 0.02 \
+  --lookback 10.0 \
+  --feature-fps 5 \
+  --slide-fps 30
+```
+
+**CLI Arguments:**
+- `video_path` (required): Path to lecture video file
+- `--output-dir`: Output base directory (default: `data/lectures`)
+- `--model`: Trained model path (default: `models/xgboost_model_20260126_160645.pkl`)
+- `--threshold`: Prediction threshold (default: `0.01` for sparse training data)
+- `--ssim`: SSIM dedup threshold (default: `0.95` for board-only comparison)
+- `--blank-threshold`: Blank edge threshold (default: `0.02` for HD videos)
+- `--lookback`: Adaptive window lookback seconds (default: `10.0`)
+- `--feature-fps`: FPS for feature extraction (default: `5`)
+- `--slide-fps`: FPS for slide extraction (default: `30`)
+
+**Checkpoint System:** Auto-saves progress. Re-run same command to resume.
+
+---
+
+#### 2. generate_lecture_notes.py - Multimodal AI Notes Generation
+**Purpose:** Generate lecture notes from slides + audio using Gemini AI
+
+```bash
+# Basic usage (requires GOOGLE_API_KEY env variable)
+python src/generate_lecture_notes.py data/lectures/algo_1
+
+# With API key argument
+python src/generate_lecture_notes.py data/lectures/algo_1 --api-key YOUR_GEMINI_KEY
+```
+
+**CLI Arguments:**
+- `lecture_folder` (required): Path to processed lecture folder
+- `--api-key`: Google Gemini API key (or set `GOOGLE_API_KEY` env variable)
+
+**Requirements:**
+- Processed lecture folder with slides/ and audio/
+- Google Gemini API key (free tier: 20 requests/day)
+
+**Output:** `notes.md` with AI-generated lecture notes
+
+**Resume Feature:** Automatically resumes from last completed slide
+
+---
+
+#### 3. production_note_maker.py - Batch Notes Generation
+**Purpose:** Process multiple videos with note generation
+
+```bash
+# List all available videos
+python src/production_note_maker.py --list-videos
+
+# Process single video
+python src/production_note_maker.py --video algo_1
+
+# Process all videos
+python src/production_note_maker.py
+
+# Use custom predictions file
+python src/production_note_maker.py \
+  --predictions data/my_predictions.csv \
+  --video toc_1
+```
+
+**CLI Arguments:**
+- `--video`: Process only specific video (e.g., `algo_1`, `toc_1`)
+- `--predictions`: Path to predictions CSV (default: `data/all_predictions.csv`)
+- `--list-videos`: List all available videos and exit
+
+---
+
+### Deduplication & Optimization Scripts
+
+#### 4. deduplicate_transitions.py - SSIM-Based Deduplication
+**Purpose:** Remove duplicate slides using SSIM comparison
+
+```bash
+# Process single video
+python src/deduplicate_transitions.py --video algo_1
+
+# Process all videos
+python src/deduplicate_transitions.py --all
+
+# With custom SSIM thresholds
+python src/deduplicate_transitions.py --video algo_1 \
+  --ssim-dedup 0.90 \
+  --ssim-rapid 0.80
+
+# Use predictions.csv instead of transitions.json
+python src/deduplicate_transitions.py --video algo_1 --use-predictions
+```
+
+**CLI Arguments:**
+- `--video`: Process single video by ID
+- `--all`: Process all videos
+- `--use-predictions`: Use `predictions.csv` instead of `transitions.json`
+- `--ssim-dedup`: SSIM threshold for deduplication (default: `0.95`)
+- `--ssim-rapid`: SSIM threshold for rapid-fire detection (default: `0.85`)
+- `--blank-threshold`: Edge count threshold for blank slides (default: `0.1`)
+
+---
+
+#### 5. test_ssim_thresholds.py - SSIM Threshold Optimization
+**Purpose:** Test different SSIM values against ground truth
+
+```bash
+# Test default thresholds (0.75-0.97)
+python src/test_ssim_thresholds.py
+
+# Test specific thresholds
+python src/test_ssim_thresholds.py --thresholds 0.80 0.85 0.90 0.95
+
+# Test single video
+python src/test_ssim_thresholds.py \
+  --video algo_1 \
+  --thresholds 0.85 0.90 0.95
+
+# Custom directories
+python src/test_ssim_thresholds.py \
+  --lectures-dir data/lectures \
+  --ground-truth-dir data/ground_truth
+```
+
+**CLI Arguments:**
+- `--thresholds`: SSIM thresholds to test (default: `0.75 0.80 0.85 0.90 0.92 0.95 0.97`)
+- `--video`: Test only specific video (e.g., `algo_1`)
+- `--lectures-dir`: Lectures directory path (default: `data/lectures`)
+- `--ground-truth-dir`: Ground truth directory path (default: `data/ground_truth`)
+
+**Output:** CSV summary + detailed JSON results in `data/analysis/`
+
+---
+
+### Slide Extraction & Quality Scripts
+
+#### 6. extract_best_slides.py - High-Quality Slide Extraction
+**Purpose:** Extract best quality slide frames from transitions
+
+```bash
+# Process all videos
+python src/extract_best_slides.py
+
+# Process single video
+python src/extract_best_slides.py --video-id algo_1
+
+# With custom parameters
+python src/extract_best_slides.py \
+  --lookback 15.0 \
+  --fps 60 \
+  --lectures-dir data/lectures \
+  --videos-dir data/videos
+```
+
+**CLI Arguments:**
+- `--lectures-dir`: Lectures directory (default: `data/lectures`)
+- `--videos-dir`: Videos directory (default: `data/videos`)
+- `--lookback`: Max lookback window in seconds (default: `10.0`)
+- `--fps`: Video FPS (default: `30`)
+- `--video-id`: Process single video only
+
+---
+
+### Training & Model Scripts
+
+#### 7. video_feature_extractor.py - Feature Extraction for Training
+**Purpose:** Extract video features for model training
+
+```bash
+# Extract features from all videos
+python src/video_feature_extractor.py
+
+# Custom input/output directories
+python src/video_feature_extractor.py \
+  --input data/videos \
+  --output data/output
+
+# Process single video with custom FPS
+python src/video_feature_extractor.py \
+  --single lecture_01.mp4 \
+  --fps 10
+```
+
+**CLI Arguments:**
+- `--input`, `-i`: Input videos directory (default: `data/videos`)
+- `--output`, `-o`: Output CSV directory (default: `data/output`)
+- `--fps`, `-f`: Sampling FPS (default: `5`)
+- `--single`, `-s`: Process single video filename only
+
+---
+
+#### 8. label_transitions.py - Ground Truth Labeling
+**Purpose:** Auto-label transitions for model training
+
+```bash
+# Label all videos
+python src/label_transitions.py
+
+# Custom directories and parameters
+python src/label_transitions.py \
+  --csv-dir data/output \
+  --ground-truth-dir data/ground_truth \
+  --window 2.0 \
+  --context 7
+
+# Process single video
+python src/label_transitions.py --single algo_1
+```
+
+**CLI Arguments:**
+- `--csv-dir`: CSV features directory (default: `data/output`)
+- `--ground-truth-dir`: Ground truth directory (default: `data/ground_truth`)
+- `--window`: Time window for matching in seconds (default: `1.5`)
+- `--context`: Context rows around transitions (default: `5`)
+- `--single`: Process single video ID only
+
+---
+
+#### 9. reprocess_videos.py - Reprocess Features with New Parameters
+**Purpose:** Re-extract features with updated parameters (with backup)
+
+```bash
+# Reprocess all videos
+python src/reprocess_videos.py
+
+# With custom FPS
+python src/reprocess_videos.py --fps 10
+
+# No backup (careful!)
+python src/reprocess_videos.py --no-backup
+
+# Custom backup directory
+python src/reprocess_videos.py --backup-dir data/my_backup
+```
+
+**CLI Arguments:**
+- `--input`, `-i`: Input videos directory (default: `data/videos`)
+- `--output`, `-o`: Output CSV directory (default: `data/output`)
+- `--fps`, `-f`: Sampling FPS (default: `5`)
+- `--no-backup`: Skip backup creation
+- `--backup-dir`: Custom backup directory (default: `data/output_backup`)
+
+---
+
+### Visualization & Preview Scripts
+
+#### 10. visualize_transitions.py - HTML Transition Preview Generator
+**Purpose:** Generate visual HTML previews of detected transitions
+
+```bash
+# List available videos
+python src/visualize_transitions.py --list-videos
+
+# Generate preview for single video
+python src/visualize_transitions.py --video algo_1
+
+# Process all videos
+python src/visualize_transitions.py --all
+
+# Custom thumbnail size and predictions file
+python src/visualize_transitions.py \
+  --video algo_1 \
+  --predictions data/all_predictions.csv \
+  --thumbnail-width 640
+```
+
+**CLI Arguments:**
+- `--video`: Process single video by ID
+- `--all`: Process all videos
+- `--predictions`: Predictions CSV path (default: `data/all_predictions.csv`)
+- `--thumbnail-width`: Thumbnail width in pixels (default: `320`)
+- `--list-videos`: List all available videos and exit
+
+**Output:** `data/transition_previews/<video_id>_preview.html`
+
+---
+
+#### 11. generate_manual_previews.py - Ground Truth Preview Generator
+**Purpose:** Generate HTML previews for manually labeled transitions
+
+```bash
+# Generate preview for single video
+python src/generate_manual_previews.py --video algo_1
+
+# Process all videos with ground truth
+python src/generate_manual_previews.py --all
+```
+
+**CLI Arguments:**
+- `--video`: Process single video ID
+- `--all`: Process all videos with ground truth
+
+**Output:** `data/transition_previews/<video_id>_manual.html`
+
+---
+
+#### 12. generate_final_preview.py - Final Slides Preview Generator
+**Purpose:** Generate HTML previews for deduplicated final slides
+
+```bash
+# Generate preview for single video
+python src/generate_final_preview.py --video algo_1
+```
+
+**CLI Arguments:**
+- `--video`: Generate preview for single video ID
+
+**Output:** `data/transition_previews/<video_id>_final.html`
+
+---
+
+### Organization & Utility Scripts
+
+#### 13. organize_lecture_folders.py - Lecture Folder Organizer
+**Purpose:** Organize processed videos into lecture folders
+
+```bash
+# Organize all videos
+python src/organize_lecture_folders.py
+
+# Process single video
+python src/organize_lecture_folders.py --video-id algo_1
+
+# Custom directories and deduplication file
+python src/organize_lecture_folders.py \
+  --videos-dir data/videos \
+  --deduplicated-json data/final_slides/final_unique_slides.json \
+  --output-dir data/lectures
+```
+
+**CLI Arguments:**
+- `--videos-dir`: Videos directory (default: `data/videos`)
+- `--deduplicated-json`: Deduplicated transitions JSON (default: `data/final_slides/final_unique_slides.json`)
+- `--output-dir`: Output directory for lectures (default: `data/lectures`)
+- `--video-id`: Process single video only
+
+---
+
+### Testing & Validation Scripts
+
+#### 14. check_baseline_accuracy.py - Ground Truth Accuracy Check
+**Purpose:** Validate current pipeline accuracy against ground truth
+
+```bash
+# Run baseline accuracy check on all training videos
+python check_baseline_accuracy.py
+```
+
+**CLI Arguments:** None (processes all training videos)
+
+**Output:** 
+- Console table with per-video metrics
+- `data/analysis/baseline_accuracy.txt`
+
+**Metrics:** Precision, Recall, F1-score with ±2.0s tolerance
+
+---
+
+#### 15. test_utilities.py - Automated Testing Framework
+**Purpose:** Run systematic testing on all utility scripts
+
+```bash
+# Run all tests
+python test_utilities.py
+
+# Run specific priority test
+python test_utilities.py --priority 1  # Baseline accuracy
+python test_utilities.py --priority 2  # SSIM optimization
+python test_utilities.py --priority 3  # Video type analysis
+python test_utilities.py --priority 4  # Slide quality
+python test_utilities.py --priority 5  # OCR + Resume
+```
+
+**CLI Arguments:**
+- `--priority`: Run only specific priority test (1-5)
+
+**Output:** Results saved to `data/analysis/utility_tests/`
+
+---
+
+### Quick Reference - Most Common Commands
+
+```bash
+# 1. Process new video (most common)
+python src/process_new_lecture.py data/videos/new_lecture.mp4 --ssim 0.85
+
+# 2. Generate notes for processed video
+python src/generate_lecture_notes.py data/lectures/new_lecture
+
+# 3. Check baseline accuracy (testing)
+python check_baseline_accuracy.py
+
+# 4. Test SSIM thresholds (optimization)
+python src/test_ssim_thresholds.py --video algo_1 --thresholds 0.80 0.85 0.90
+
+# 5. Visualize transitions (validation)
+python src/visualize_transitions.py --video algo_1
+
+# 6. Deduplicate with custom SSIM
+python src/deduplicate_transitions.py --video algo_1 --ssim-dedup 0.85
+
+# 7. Extract features for training
+python src/video_feature_extractor.py --input data/videos --fps 5
+
+# 8. Generate preview for final slides
+python src/generate_final_preview.py --video algo_1
+```
+
+---
+
+## �📋 Recent Updates - Version 3.0
 
 ### January 29, 2026 - Multimodal Notes Generation & Optimization v3.0
+**Major Features Added:**
+
+---
+
+### Utility Scripts (Root Directory)
+
+#### 16. rerun_deduplication.py - Instant SSIM Re-optimization
+**Purpose:** Re-run deduplication with new SSIM threshold (no video reprocessing)
+
+```bash
+# Re-deduplicate with SSIM 0.85
+python rerun_deduplication.py data/lectures/deadlock_os --ssim 0.85
+
+# Test lower threshold (more aggressive deduplication)
+python rerun_deduplication.py data/lectures/algo_1 --ssim 0.80
+
+# Test higher threshold (keep more slides)
+python rerun_deduplication.py data/lectures/cn_1 --ssim 0.90
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory with slides/
+- `--ssim`: New SSIM threshold (default: `0.85`)
+
+**Speed:** ~3 seconds (vs 40 minutes for full reprocessing)  
+**Output:** Updates `transitions.json` with new deduplicated transitions
+
+---
+
+#### 17. analyze_video_type.py - SSIM Threshold Recommender
+**Purpose:** Classify video teaching style and recommend optimal SSIM
+
+```bash
+# Analyze video type
+python analyze_video_type.py data/lectures/deadlock_os
+
+# With visualization (requires matplotlib)
+python analyze_video_type.py data/lectures/chemistry_01_english --visualize
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory
+- `--visualize`: Show SSIM distribution plot (histogram + sequential)
+
+**Output:**
+- Console: Video type classification and SSIM recommendation
+- File: `video_type_analysis.json` in lecture directory
+
+**Video Types:**
+- `INCREMENTAL_WRITING`: Professor builds slides gradually → SSIM 0.80-0.85
+- `DISCRETE_SLIDES`: Clean slide changes → SSIM 0.92-0.95
+- `MIXED`: Combination of both → SSIM 0.85-0.90
+
+---
+
+#### 18. check_slide_quality.py - Pre-Generation Quality Gate
+**Purpose:** Detect poor quality slides before notes generation
+
+```bash
+# Basic quality check
+python check_slide_quality.py data/lectures/deadlock_os
+
+# With custom threshold
+python check_slide_quality.py data/lectures/algo_1 --threshold 70
+
+# Show bad slides visually
+python check_slide_quality.py data/lectures/cn_1 --show-bad-slides
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory
+- `--threshold`: Quality score threshold for warnings (default: `70`)
+- `--show-bad-slides`: Display poor quality slides in OpenCV window
+
+**Output:**
+- Console: Quality summary (EXCELLENT/GOOD/ACCEPTABLE/POOR)
+- File: `quality_report.json` in lecture directory
+
+**Checks:**
+- Sharpness (Laplacian variance > 100)
+- Brightness (50-220 range)
+- Contrast (> 30)
+- Teacher occlusion (< 15%)
+
+---
+
+#### 19. check_ocr_confidence.py - OCR Quality Analyzer
+**Purpose:** Identify slides with poor text extraction
+
+```bash
+# Check OCR confidence
+python check_ocr_confidence.py data/lectures/deadlock_os
+
+# With custom confidence threshold
+python check_ocr_confidence.py data/lectures/chemistry_01 --threshold 0.8
+
+# Show problem slides visually
+python check_ocr_confidence.py data/lectures/algo_1 --show-problems
+
+# Export detailed JSON report
+python check_ocr_confidence.py data/lectures/db_1 --export-report
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory
+- `--threshold`: Confidence threshold (default: `0.75`)
+- `--show-problems`: Display problem slides visually
+- `--export-report`: Save detailed JSON report
+
+**Requirements:** `ocr_cache.json` (generated during notes creation)
+
+**Output:**
+- Console: Confidence summary (HIGH/MEDIUM/LOW)
+- File: `ocr_confidence_report.json` (if --export-report used)
+
+**Flags:**
+- `HIGH_CONFIDENCE`: Avg > threshold, reliable
+- `MEDIUM_CONFIDENCE`: Avg near threshold, review recommended
+- `LOW_CONFIDENCE`: Avg < threshold, manual correction needed
+- `EMPTY`: No text detected
+
+---
+
+#### 20. resume_notes.py - Checkpoint Recovery for Notes Generation
+**Purpose:** Resume interrupted notes generation from last checkpoint
+
+```bash
+# Auto-detect last completed slide and resume
+python resume_notes.py data/lectures/deadlock_os
+
+# Start from specific slide number
+python resume_notes.py data/lectures/deadlock_os --start-from 18
+
+# Force regenerate all (ignore checkpoint)
+python resume_notes.py data/lectures/deadlock_os --force-regenerate
+
+# Dry run (show what would be done)
+python resume_notes.py data/lectures/deadlock_os --dry-run
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory
+- `--start-from`: Start from specific slide number (overrides auto-detection)
+- `--force-regenerate`: Ignore checkpoint and regenerate all notes
+- `--dry-run`: Show plan without executing
+
+**Output:**
+- Detects last completed slide from `notes.md`
+- Shows remaining slides and estimated API calls
+- Resumes generation seamlessly
+
+**Use Case:** Free tier Gemini limit (20 requests/day) for 50-slide lecture = 3 days
+
+---
+
+#### 21. curate_slides.py - Interactive Manual Curator
+**Purpose:** Manually review and select slides with visual interface
+
+```bash
+# Launch interactive curator
+python curate_slides.py data/lectures/deadlock_os
+
+# Works on any processed lecture
+python curate_slides.py data/lectures/chemistry_01_english
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory
+
+**Keyboard Controls:**
+- `Y`: Keep current slide and move to next
+- `N`: Skip current slide and move to next
+- `U`: Undo (toggle keep/skip status)
+- `←` `→` or `A` `D`: Navigate between slides
+- `R`: Auto-remove remaining duplicates (SSIM > 0.90)
+- `S`: Save changes and exit
+- `Q` or `ESC`: Quit without saving
+
+**Output:**
+- Updates `transitions.json` with curated selections
+- Backs up original to `transitions_backup.json`
+- Semi-transparent info overlay shows current status
+
+**Speed:** Review 20 slides in ~2 minutes
+
+---
+
+#### 22. export_notes.py - Multi-Format Notes Exporter
+**Purpose:** Export generated notes to multiple distribution formats
+
+```bash
+# Export to PDF
+python export_notes.py data/lectures/deadlock_os --format pdf
+
+# Export to multiple formats (comma-separated)
+python export_notes.py data/lectures/chemistry_01 --format pdf,docx
+
+# Export to all formats
+python export_notes.py data/lectures/algo_1 --format all
+
+# Short form
+python export_notes.py data/lectures/db_1 -f docx
+```
+
+**CLI Arguments:**
+- `lecture_dir` (required): Path to lecture directory with notes.md
+- `--format`, `-f`: Export format(s) - `pdf`, `docx`, `anki`, `notion`, or `all` (comma-separated, default: `pdf`)
+
+**Supported Formats:**
+- `pdf`: Professional PDF with CSS styling (requires `weasyprint`)
+- `docx`: Microsoft Word document (requires `python-docx`)
+- `anki`: Anki flashcard deck `.apkg` (requires `genanki`)
+- `notion`: Notion-ready Markdown (no extra dependencies)
+- `all`: Export to all formats
+
+**Output Files:**
+- `notes.pdf` - Styled PDF with cover page and TOC
+- `notes.docx` - Formatted Word document
+- `notes.apkg` - Anki flashcard deck (auto-generated from headings)
+- `notes_notion.md` - Notion-compatible Markdown
+
+**Dependencies (optional):**
+```bash
+pip install markdown weasyprint      # For PDF
+pip install python-docx              # For DOCX
+pip install genanki                  # For Anki
+```
+
+**Graceful Fallback:** Skips formats with missing dependencies
+
+---
+
+### Quick Reference - Utility Scripts
+
+```bash
+# 1. Re-optimize SSIM threshold (instant)
+python rerun_deduplication.py data/lectures/<name> --ssim 0.85
+
+# 2. Analyze video type and get SSIM recommendation
+python analyze_video_type.py data/lectures/<name> --visualize
+
+# 3. Check slide quality before notes generation
+python check_slide_quality.py data/lectures/<name> --show-bad-slides
+
+# 4. Check OCR confidence
+python check_ocr_confidence.py data/lectures/<name> --threshold 0.75
+
+# 5. Resume interrupted notes generation
+python resume_notes.py data/lectures/<name> --dry-run
+
+# 6. Manually curate slides interactively
+python curate_slides.py data/lectures/<name>
+
+# 7. Export notes to PDF/DOCX/Anki
+python export_notes.py data/lectures/<name> --format pdf,docx
+```
+
+---
+
+### January 29, 2026 - Multimodal Notes Generation & Optimization v3.0 (continued)
 **Major Features Added:**
 
 1. **Complete Notes Generation Pipeline**
@@ -1113,3 +1992,4 @@ data/final_notes/<video>/ - High-quality PNG slides
 data/final_notes/lecture_metadata.json - Metadata for AI
 data/final_notes/extract_audio.bat - Windows audio extraction
 data/final_notes/extract_audio.sh - Linux/Mac audio extraction
+
