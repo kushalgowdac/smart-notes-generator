@@ -102,6 +102,96 @@ Runs both slides extraction + notes generation automatically.
 
 ## 🔧 Utility Scripts (Advanced Use)
 
+### 🎯 Smart SSIM Threshold Recommender (NEW!)
+```bash
+# Analyze video and get optimal threshold recommendation
+python analyze_video_type.py data/lectures/my_lecture
+
+# With visualization plot
+python analyze_video_type.py data/lectures/my_lecture --visualize
+```
+
+**What it does:**
+- Classifies video type: INCREMENTAL_WRITING, MIXED, or DISCRETE_SLIDES
+- Analyzes SSIM distribution between consecutive slides
+- **Recommends optimal threshold** based on patterns
+- Predicts reduction at different thresholds
+- Shows sample duplicates
+
+**Output:**
+```
+Classification: INCREMENTAL_WRITING
+Recommended SSIM threshold: 0.80
+
+Impact prediction:
+Threshold | Original | Duplicates | Final | Reduction
+  0.80    |    20    |     6      |  14   |  30.0%
+  0.85    |    20    |     4      |  16   |  20.0%
+```
+
+---
+
+### 📊 Slide Quality Checker (NEW!)
+```bash
+# Check all slides for quality issues
+python check_slide_quality.py data/lectures/my_lecture
+
+# Custom quality threshold
+python check_slide_quality.py data/lectures/my_lecture --threshold 80
+
+# Show flagged slides visually
+python check_slide_quality.py data/lectures/my_lecture --show-bad-slides
+```
+
+**What it does:**
+- Detects **blurry slides** (low Laplacian variance)
+- Finds **overexposed/underexposed** frames
+- Identifies **teacher occlusion** (>15% coverage)
+- Checks **contrast levels**
+- Quality score: EXCELLENT / GOOD / ACCEPTABLE / POOR
+
+**Why use it:**
+- **Save API quota** - don't process bad slides
+- Quality check before notes generation
+- Identify slides needing manual review
+
+**Output:** `quality_report.json` with detailed metrics
+
+---
+
+### 🔄 Resume Notes Generation (NEW!)
+```bash
+# Auto-detect last completed slide and resume
+python resume_notes.py data/lectures/my_lecture
+
+# Start from specific slide
+python resume_notes.py data/lectures/my_lecture --start-from 18
+
+# Dry run (show plan without executing)
+python resume_notes.py data/lectures/my_lecture --dry-run
+```
+
+**What it does:**
+- Parses `notes.md` to find last completed slide
+- **Resumes from checkpoint** when API quota runs out
+- Uses cached OCR/transcription (zero cost re-runs)
+- Estimates API calls needed vs available quota
+
+**Critical for free tier:**
+- Gemini free tier: 20 requests/day
+- Multi-day processing for large lectures
+- No need to regenerate completed slides
+
+**Example:**
+```
+Auto-detected: Resuming from slide 18
+Slides to process: 3 (slides 18-20)
+Estimated API calls: 3
+Free tier quota: 20 requests/day
+```
+
+---
+
 ### Re-optimize Deduplication (Zero Video Processing)
 ```bash
 # Adjust SSIM threshold without reprocessing video (3s vs 40min!)
@@ -268,7 +358,10 @@ smart-notes-generator/
 │   ├── src/production_note_maker.py     # Notes generation
 │   └── run_production_notes.py          # Alias for production_note_maker.py
 │
-├── 🔧 UTILITIES
+├── 🔧 UTILITIES (Advanced Optimization)
+│   ├── analyze_video_type.py            # 🆕 Smart SSIM threshold recommender
+│   ├── resume_notes.py                  # 🆕 Resume from API quota exhaustion
+│   ├── check_slide_quality.py           # 🆕 Verify slides before notes generation
 │   ├── rerun_deduplication.py           # Instant SSIM re-optimization
 │   ├── process_complete.bat/.sh         # Convenience wrappers
 │   ├── generate_notes.bat/.sh           # Quick notes generation
