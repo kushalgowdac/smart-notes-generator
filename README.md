@@ -362,6 +362,9 @@ smart-notes-generator/
 │   ├── analyze_video_type.py            # 🆕 Smart SSIM threshold recommender
 │   ├── resume_notes.py                  # 🆕 Resume from API quota exhaustion
 │   ├── check_slide_quality.py           # 🆕 Verify slides before notes generation
+│   ├── curate_slides.py                 # 🆕 Interactive manual slide curation
+│   ├── export_notes.py                  # 🆕 Export to PDF/DOCX/Anki/Notion
+│   ├── check_ocr_confidence.py          # 🆕 OCR quality analysis
 │   ├── rerun_deduplication.py           # Instant SSIM re-optimization
 │   ├── process_complete.bat/.sh         # Convenience wrappers
 │   ├── generate_notes.bat/.sh           # Quick notes generation
