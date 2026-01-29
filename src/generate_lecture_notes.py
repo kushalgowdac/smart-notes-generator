@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 class Config:
     """Configuration settings for notes generation"""
     # API Keys (set as environment variable or paste here)
-    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', 'AIzaSyB67rUPGmWis56fWs1D3-wAIigKRddTv_0')
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', '')
     
     # Model settings
     GEMINI_MODEL = 'gemini-2.5-flash'  # January 2026 free tier (250 req/day)
